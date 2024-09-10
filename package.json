@@ -12,6 +12,7 @@
     "framer-motion": "^11.5.4",
     "lenis": "^1.1.13",
     "next": "14.2.8",
+    "nextjs-google-analytics": "^2.3.7",
     "react": "^18",
     "react-dom": "^18",
     "vite": "^5.4.3"
