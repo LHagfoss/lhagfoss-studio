@@ -8,10 +8,10 @@ import About from "@components/about";
 
 export default function Home() {
   return (
-    <>
+    <div className="w-full h-full overflow-hidden">
       <Navbar />
       <NavnAnimation />
       <About />
-    </>
+    </div>
   );
 }
