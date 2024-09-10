@@ -1,9 +1,7 @@
 "use client"
 
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion, easeInOut } from "framer-motion"
-import Lenis from "lenis";
 
 export default function NavnAnimation() {
 
