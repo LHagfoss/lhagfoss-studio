@@ -20,19 +20,19 @@ export default function Navbar() {
         <div className="navbar fixed w-[100vw] flex justify-center items-center p-10">
             <div className="w-full font-bestFont text-[#1a1a1a] justify-between items-start tracking-wide sm:text-[2.5vw] sm:hidden md:text-[2vw] md:flex lg:text-[1.5vw] lg:flex hidden">
                 <div className="flex flex-col">
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }} className=""><Link href="/">lucas</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }} className="hoverMe"><Link href="/">lucas</Link></motion.div>
                 </div>
                 <div className="flex flex-col">
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.2, ease: easeInOut }} className=""><Link href="/">digital studio</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.2, ease: easeInOut }} className="hoverMe"><Link href="/">digital studio</Link></motion.div>
                 </div>
                 <div className="flex flex-col leading-10">
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.4, ease: easeInOut }} className=""><Link href="/">work</Link></motion.div>
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.6, ease: easeInOut }} className=""><Link href="/">about</Link></motion.div>
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.8, ease: easeInOut }} className=""><Link href="/">other</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.4, ease: easeInOut }} className="hoverMe"><Link href="/">work</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.6, ease: easeInOut }} className="hoverMe"><Link href="/">about</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.8, ease: easeInOut }} className="hoverMe"><Link href="/">other</Link></motion.div>
                 </div>
                 <div className="flex flex-col leading-10">
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3, ease: easeInOut }} className=""><Link href="/">github</Link></motion.div>
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.2, ease: easeInOut }} className=""><Link href="/">contact</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3, ease: easeInOut }} className="hoverMe"><Link href="/">github</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.2, ease: easeInOut }} className="hoverMe"><Link href="/">contact</Link></motion.div>
                 </div>
                 <div className="flex gap-3">
                     <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.6, ease: easeInOut }} className=""><Link href="/signup" className="bg-[#1a1a1a] text-[#ebebeb] p-2 px-4 rounded-[5px]">sign up</Link></motion.div>
@@ -50,23 +50,25 @@ export default function Navbar() {
                 >
                     <div className="w-full h-full top-0 left-0 bg-[#ebebeb] fixed p-[5vw] py-[30vw] font-bestFont text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col border">
                         <div className="flex flex-col">
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }} className=""><Link href="/">lucas</Link></motion.div>
-                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.2, ease: easeInOut }} className=""><Link href="/">digital studio</Link></motion.div>
-                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.4, ease: easeInOut }} className=""><Link href="/">work</Link></motion.div>
-                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.6, ease: easeInOut }} className=""><Link href="/">about</Link></motion.div>
-                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.8, ease: easeInOut }} className=""><Link href="/">other</Link></motion.div>
-                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 3, ease: easeInOut }} className=""><Link href="/">github</Link></motion.div>
-                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.2, ease: easeInOut }} className=""><Link href="/">contact</Link></motion.div>
-                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.4, ease: easeInOut }} className=""><Link href="/">norway, krs</Link></motion.div>
+                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }} className="hoverMe"><Link href="/">lucas</Link></motion.div>
+                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.2, ease: easeInOut }} className="hoverMe"><Link href="/">digital studio</Link></motion.div>
+                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.4, ease: easeInOut }} className="hoverMe"><Link href="/">work</Link></motion.div>
+                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.6, ease: easeInOut }} className="hoverMe"><Link href="/">about</Link></motion.div>
+                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.8, ease: easeInOut }} className="hoverMe"><Link href="/">other</Link></motion.div>
+                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 3, ease: easeInOut }} className="hoverMe"><Link href="/">github</Link></motion.div>
+                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.2, ease: easeInOut }} className="hoverMe"><Link href="/">contact</Link></motion.div>
+                            <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.4, ease: easeInOut }} className="hoverMe"><Link href="/">norway, krs</Link></motion.div>
                         </div>
                     </div>
                 </motion.div>
             </div>
-            <div className="fixed bottom-0 left-0 m-10">v.0.5</div>
-            <div className="fixed bottom-0 right-0 m-10 text-end">
-                <div className="">norway, krs</div>
-                <div className="" onClick={updateDate}>{date}</div>
-            </div>
+            <motion.div initial={{ opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: easeInOut }} className=""><div className="fixed bottom-0 left-0 m-10">v.0.5</div></motion.div>
+            <motion.div initial={{ opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: easeInOut }} className="">
+                <div className="fixed bottom-0 right-0 m-10 text-end">
+                    <div className="">norway, krs</div>
+                    <div className="" onClick={updateDate}>{date}</div>
+                </div>
+            </motion.div>
         </div>
     )
 }

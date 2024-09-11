@@ -33,3 +33,19 @@ body {
     --radius: 0.5rem;
   }
 }
+
+.hoverMe::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.hoverMe:hover::after {
+  width: 100%;
+}
