@@ -8,9 +8,18 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		backgroundColor: {
+			primary: "#1e1e1e",
+			secondary: "#ebebeb"
+		},
+		lineHeight: {
+			adopt: "0.7"	
+		},
   		colors: {
   			background: 'var(--background)',
-  			foreground: 'var(--foreground)'
+  			foreground: 'var(--foreground)',
+			primary: "#1e1e1e",
+			secondary: "#ebebeb"
   		},
   		fontFamily: {
   			bestFont: 'bestFont'
