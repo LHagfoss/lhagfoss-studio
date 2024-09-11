@@ -15,6 +15,7 @@ export default function NavnAnimation() {
                 <motion.div initial={{ y: 700 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1.6, ease: easeInOut }} className="">a</motion.div>
                 <motion.div initial={{ y: 700 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1.8, ease: easeInOut }} className="">s</motion.div>
             </div>
+            <div className="fixed bottom-0 right-0 m-10">v.0.5</div>
         </div>
     )
 }
