@@ -24,3 +24,9 @@ body {
 }
 
 .navbar { z-index: 999; }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
