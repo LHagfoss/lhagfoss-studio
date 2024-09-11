@@ -14,7 +14,6 @@ export default function Navbar() {
 
     const updateDate = () => {
         setDate(new Date().toLocaleDateString());
-        updateDate()
     };
 
     return (
@@ -66,7 +65,7 @@ export default function Navbar() {
             <div className="fixed bottom-0 left-0 m-10">v.0.5</div>
             <div className="fixed bottom-0 right-0 m-10 text-end">
                 <div className="">norway, krs</div>
-                <div className="">{date}</div>
+                <div className="" onClick={updateDate}>{date}</div>
             </div>
         </div>
     )
