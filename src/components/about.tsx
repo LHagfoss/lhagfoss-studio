@@ -6,7 +6,7 @@ export default function About() {
 
     return (
         <div className="absolute bottom-0 w-[100vw] flex justify-center items-center p-10">
-            <div className="w-full text-[#1a1a1a] flex flex-wrap text-[5vw] sm:text-[5vw] md:text-[2vw] lg:text-[4vw] lg:leading-adopt leading-3 overflow-hidden">
+            <div className="w-full text-[#1a1a1a] flex flex-wrap text-[5vw] sm:text-[5vw] md:text-[2vw] lg:text-[4vw] lg:leading-11 leading-3 overflow-hidden">
                 {text.split(" ").map((word, index) => (
                     <motion.div key={index} initial={{ y: 300 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2 + index * 0.1, ease: easeInOut }} className="p-2">{word}</motion.div>
                 ))}

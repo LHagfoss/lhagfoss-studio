@@ -10,16 +10,19 @@ module.exports = {
   	extend: {
 		backgroundColor: {
 			primary: "#1e1e1e",
-			secondary: "#ebebeb"
+			secondary: "#ebebeb",
+			thirdy: "#474747"
 		},
 		lineHeight: {
-			adopt: "0.7"	
+			11: "0.7",
+			12: "0.8"
 		},
   		colors: {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
 			primary: "#1e1e1e",
-			secondary: "#ebebeb"
+			secondary: "#ebebeb",
+			thirdy: "#474747"
   		},
   		fontFamily: {
   			bestFont: 'bestFont'
