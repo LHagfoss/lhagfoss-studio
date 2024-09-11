@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react";
-import { motion, easeInOut } from "framer-motion"
 
 import Navbar from "./navbar";
 
