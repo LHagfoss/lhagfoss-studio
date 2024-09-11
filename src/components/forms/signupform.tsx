@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 export function SignupForm() {
   return (
     <div className="w-full max-w-md">
+      <Link href="/">Home</Link>
       <form>
         <Card>
           <CardHeader className="space-y-1">

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     const [date, setDate] = useState(new Date().toLocaleDateString());
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -14,7 +14,8 @@ export default function Navbar() {
 
     const updateDate = () => {
         setDate(new Date().toLocaleDateString());
-    };    
+        updateDate()
+    };
 
     return (
         <div className="navbar fixed w-[100vw] flex justify-center items-center p-10">
@@ -35,7 +36,7 @@ export default function Navbar() {
                     <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.2, ease: easeInOut }} className=""><Link href="/">contact</Link></motion.div>
                 </div>
                 <div className="flex gap-3">
-                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.6, ease: easeInOut }} className=""><Link href="/signup" className="bg-[#1a1a1a] text-[#ebebeb] p-2 px-4 rounded-[5px]">sign Up</Link></motion.div>
+                    <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.6, ease: easeInOut }} className=""><Link href="/signup" className="bg-[#1a1a1a] text-[#ebebeb] p-2 px-4 rounded-[5px]">sign up</Link></motion.div>
                     <motion.div initial={{ y: -200 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.8, ease: easeInOut }} className=""><Link href="/signin" className="border border-[#1a1a1a] p-2 px-4 rounded-[5px]">sign in</Link></motion.div>
                 </div>
             </div>
@@ -63,7 +64,7 @@ export default function Navbar() {
                 </motion.div>
             </div>
             <div className="fixed bottom-0 left-0 m-10">v.0.5</div>
-            <div className="fixed bottom-0 right-0 m-10">
+            <div className="fixed bottom-0 right-0 m-10 text-end">
                 <div className="">norway, krs</div>
                 <div className="">{date}</div>
             </div>
