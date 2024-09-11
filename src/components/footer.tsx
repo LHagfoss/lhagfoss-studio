@@ -28,7 +28,7 @@ export default function Footer() {
             <Navbar />
             <div className="w-full h-full overflow-hidden flex justify-center items-center p-10">
                 <div className="bg-primary w-[100vw] h-[65vh] rounded-[2vw] p-14 font-bestFont text-secondary flex flex-col justify-between">
-                    <div className="text-[4vw] leading-12 text-thirdy"><span className="text-secondary">Let's talk </span> about<br/> your project</div>
+                    <div className="text-[4vw] leading-12 text-thirdy"><span className="text-secondary">Let`s talk </span> about<br/> your project</div>
                     <div className="w-full border-t border-thirdy flex justify-between pt-10">
                         <div className="">
                             <div className="text-thirdy ">version</div>
