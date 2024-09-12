@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import Navbar from "./navbar";
-
 export default function Footer() {
     function getFormattedTime() {
         const now = new Date();
