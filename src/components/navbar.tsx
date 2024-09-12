@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
-import { motion, easeInOut, easeIn } from "framer-motion"
+import { motion, easeInOut } from "framer-motion"
 import Link from "next/link";
 
 export default function Navbar() {
