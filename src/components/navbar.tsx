@@ -13,7 +13,7 @@ export default function Navbar() {
     };
 
     return (
-        <div className="navbar top-0 fixed w-[100vw] flex justify-center items-center p-10">
+        <div className="navbar top-0 fixed w-[100vw] flex justify-center items-center p-10 bg-secondary">
             <div className="w-full font-bestFont text-[#1a1a1a] justify-between items-start tracking-wide sm:text-[2.5vw] sm:hidden md:text-[2vw] md:flex lg:text-[1.5vw] lg:flex hidden">
                 <div className="flex flex-col">
                     <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}><Link href="/" className="p-2 px-4 hover:bg-[#1a1a1a] hover:text-[#ebebeb] transition-all duration-300 rounded-full">lucas</Link></motion.div>
@@ -42,7 +42,7 @@ export default function Navbar() {
                     initial={{ x: -1000 }}
                     animate={{ x: isOpen ? -1000 : 0 }}
                     transition={{ duration: 1, ease: easeInOut }}
-                    className="w-full h-full top-0 left-0 bg-[#ebebeb] fixed p-[5vw] py-[30vw] font-bestFont text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col border"
+                    className="w-full h-full top-0 left-0 backdrop-blur-lg bg-[#ffffff3b] fixed p-[5vw] py-[30vw] font-bestFont text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col"
                 >
                     <div className="flex flex-col">
                     <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }} className=""><Link href="/">lucas</Link></motion.div>
