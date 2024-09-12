@@ -77,9 +77,9 @@ export default function Footer() {
                         <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
                             <div className="text-thirdy ">socials</div>
                             <div className="flex gap-5">
-                                <Link href="" className="flex gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>instagram</Link>
-                                <Link href="" className="flex gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>youtube</Link>
-                                <Link href="" className="flex gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>twitter</Link>
+                                <Link href="" className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>instagram</Link>
+                                <Link href="" className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>youtube</Link>
+                                <Link href="" className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>twitter</Link>
                             </div>
                         </div>
                     </div>
