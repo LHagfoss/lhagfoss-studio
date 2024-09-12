@@ -5,16 +5,12 @@ import { motion, easeInOut } from "framer-motion"
 import Link from "next/link";
 
 export default function Navbar() {
-    const [date, setDate] = useState(new Date().toLocaleDateString());
     const [isOpen, setIsOpen] = useState(true);
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     };
 
-    const updateDate = () => {
-        setDate(new Date().toLocaleDateString());
-    };
 
     return (
         <div className="navbar top-0 fixed w-[100vw] flex justify-center items-center p-10">
