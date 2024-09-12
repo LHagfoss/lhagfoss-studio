@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -12,7 +13,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "LHagfoss | Home",
   description: "Developed by Lucas Hagfoss",
   openGraph: {
@@ -28,7 +29,6 @@ export const metadata = {
     ],
   },
 };
-
 
 export default function RootLayout({
   children,
