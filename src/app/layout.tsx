@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LHagfoss",
+  title: "LHagfoss | Home",
   description: "Developed by Lucas Hagfoss",
 };
 

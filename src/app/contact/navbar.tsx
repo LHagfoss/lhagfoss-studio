@@ -61,13 +61,6 @@ export default function Navbar() {
                     </div>
                 </motion.div>
             </div>
-            <motion.div initial={{ opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: easeInOut }} className="font-bestFont"><div className="fixed bottom-0 left-0 m-10">V.0.5</div></motion.div>
-            <motion.div initial={{ opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: easeInOut }} className="font-bestFont">
-                <div className="fixed bottom-0 right-0 m-10 text-end">
-                    <div className="">norway, krs</div>
-                    <div className="" onClick={updateDate}>{date}</div>
-                </div>
-            </motion.div>
         </div>
     )
 }

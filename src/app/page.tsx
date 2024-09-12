@@ -1,12 +1,13 @@
 "use client"
 
 import React, { useEffect } from "react";
+import Lenis from "lenis";
 
 import NavnAnimation from "@components/navn";
 import Navbar from "@components/navbar";
 import About from "@components/about";
 import Footer from "@components/footer";
-import Lenis from "lenis";
+
 
 export default function Home() {
 

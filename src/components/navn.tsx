@@ -7,7 +7,7 @@ export default function NavnAnimation() {
 
 
     return (
-        <div className="absolute w-[100vw] h-[80vh] sm:h-[70vh] md:h-[70vh] lg:h-[70vh] flex justify-center items-center">
+        <div className="absolute w-[100vw] h-[80vh] sm:h-[70vh] md:h-[70vh] lg:h-[80vh] flex justify-center items-center">
             <div className="font-bestFont text-[#1a1a1a] flex justify-center items-center text-[38vw] h-[30vw] overflow-hidden">
                 <motion.div initial={{ y: 800 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: easeInOut }} className="">l</motion.div>
                 <motion.div initial={{ y: 800 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1.2, ease: easeInOut }} className="">u</motion.div>
