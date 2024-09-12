@@ -42,7 +42,7 @@ export default function Navbar() {
                     initial={{ x: -1000 }}
                     animate={{ x: isOpen ? -1000 : 0 }}
                     transition={{ duration: 1, ease: easeInOut }}
-                    className="w-full h-full top-0 left-0 backdrop-blur-lg bg-[#ffffff3b] fixed p-[5vw] py-[30vw] font-bestFont text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col"
+                    className="w-full h-full top-0 left-0 backdrop-blur-lg bg-[#ffffff5b] fixed p-[5vw] py-[30vw] font-bestFont text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col"
                 >
                     <div className="flex flex-col">
                     <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }} className=""><Link href="/">lucas</Link></motion.div>
