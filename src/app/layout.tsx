@@ -13,7 +13,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "LHagfoss | Home",
   description: "Developed by Lucas Hagfoss",
   openGraph: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "../../assets/thumbnail.jpg",
         width: 800,
         height: 600,
-        alt: "Thumbnail image description",
+        alt: "Description of the image",
       },
     ],
   },
