@@ -27,8 +27,8 @@ export default function Footer() {
 
     return (
         <>
-            <div className="w-full h-full overflow-hidden flex justify-center items-end p-10">
-                <div className="bg-primary w-[100vw] h-[150vw] md:h-[65vh] rounded-[2vw] p-14 font-bestFont text-secondary flex flex-col justify-between">
+            <div className="w-full h-full overflow-hidden flex justify-center items-end p-0 md:p-10">
+                <div className="bg-primary w-[100vw] h-[150vw] md:h-[65vh] rounded-t-[5vw] md:rounded-[2vw] p-14 font-bestFont text-secondary flex flex-col justify-between">
                     <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy border-b border-thirdy pb-10"><span className="text-secondary">Let`s talk </span> about<br/> your project</div>
                         <div className="w-full flex flex-row justify-center md:justify-start">
                         <div className="flex gap-10">
