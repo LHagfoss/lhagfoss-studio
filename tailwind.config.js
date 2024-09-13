@@ -11,7 +11,8 @@ module.exports = {
 		backgroundColor: {
 			primary: "#1e1e1e",
 			secondary: "#ebebeb",
-			thirdy: "#474747"
+			thirdy: "#474747",
+			fourth: "#111"
 		},
 		lineHeight: {
 			11: "0.7",
@@ -22,7 +23,8 @@ module.exports = {
   			foreground: 'var(--foreground)',
 			primary: "#1e1e1e",
 			secondary: "#ebebeb",
-			thirdy: "#474747"
+			thirdy: "#474747",
+			fourth: "#111"
   		},
   		fontFamily: {
   			bestFont: 'bestFont'
