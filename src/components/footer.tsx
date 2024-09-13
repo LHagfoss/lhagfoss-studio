@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import albumcover from "@assets/polyphiaalbumcover.jpg"
+import nextjs from "@assets/nextjs.png"
 
 export default function Footer() {
     function getFormattedTime() {
@@ -31,15 +32,30 @@ export default function Footer() {
                 <div className="bg-primary w-[100vw] h-[150vw] md:h-[65vh] rounded-t-[5vw] md:rounded-[2vw] p-14 font-bestFont text-secondary flex flex-col justify-between">
                     <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy border-b border-thirdy pb-10"><span className="text-secondary">Let`s talk </span> about<br/> your project</div>
                         <div className="w-full flex flex-row justify-center md:justify-start">
-                        <div className="flex gap-10">
+                        <div className="flex gap-5 md:gap-10">
                             <div className="flex flex-col gap-3">
-                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[3vw] md:text-[0.8vw]">
+                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
+                                    <div className="">coding</div>
+                                    <div className="bg-thirdy p-1 px-4 rounded-full">currently</div>
+                                </div>
+                                <div className="flex justify-center items-center gap-5 flex-col md:flex-row">
+                                    <div className="w-[20vw] md:w-[10vw] aspect-square rounded-[1vw] overflow-hidden">
+                                        <Image src={nextjs} alt="" className="object-cover w-full h-full"></Image>
+                                    </div>
+                                    <div className="">
+                                        <div className="text-secondary text-[3vw] md:text-[0.8vw]">LHagfoss.com</div>
+                                        <div className="text-thirdy text-[2vw] md:text-[0.7vw]">Next.js App - Cursor IDE</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-3">
+                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
                                     <div className="">listening to</div>
                                     <div className="bg-thirdy p-1 px-4 rounded-full">5 hours ago</div>
                                 </div>
                                 <div className="flex justify-center items-center gap-5 flex-col md:flex-row">
                                     <div className="w-[20vw] md:w-[10vw] aspect-square rounded-[1vw] overflow-hidden">
-                                        <Image src={albumcover} alt="" className="object-cover"></Image>
+                                        <Image src={albumcover} alt="" className="object-cover w-full h-full"></Image>
                                     </div>
                                     <div className="">
                                         <div className="text-secondary text-[3vw] md:text-[0.8vw]">Playing Goat</div>
@@ -48,7 +64,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-3">
-                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[3vw] md:text-[0.8vw]">
+                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
                                     <div className="">watching</div>
                                     <div className="bg-thirdy p-1 px-4 rounded-full">NaN</div>
                                 </div>
