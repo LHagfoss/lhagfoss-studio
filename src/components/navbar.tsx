@@ -27,19 +27,19 @@ export default function Navbar() {
         <div className="navbar top-0 absolute w-[100vw] flex justify-center items-center p-7">
             <div className="w-full font-bestFont text-[#1a1a1a] justify-between items-start tracking-wide sm:text-[2.5vw] sm:hidden md:text-[2vw] md:flex lg:text-[1.5vw] lg:flex hidden">
                 <div className="flex flex-col">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink href="/">lucas</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2} href="/">lucas</MotionLink></motion.div>
                 </div> 
                 <div className="flex flex-col">
-                    <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.2, ease: easeInOut }}><Link href="/" className="p-2 px-4 hover:bg-[#1a1a1a] hover:text-[#ebebeb] transition-all duration-200 rounded-full">digital studio</Link></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.2} href="/">Digital Studio</MotionLink></motion.div>
                 </div>
                 <div className="flex flex-col gap-3">
-                    <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.4, ease: easeInOut }}><Link href="/" className="p-2 px-4 hover:bg-[#1a1a1a] hover:text-[#ebebeb] transition-all duration-200 rounded-full">project / work</Link></motion.div>
-                    <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.6, ease: easeInOut }}><Link href="/" className="p-2 px-4 hover:bg-[#1a1a1a] hover:text-[#ebebeb] transition-all duration-200 rounded-full">about / info</Link></motion.div>
-                    <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.8, ease: easeInOut }}><Link href="/" className="p-2 px-4 hover:bg-[#1a1a1a] hover:text-[#ebebeb] transition-all duration-200 rounded-full">other</Link></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.4} href="/project">project / work</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.6} href="/about">about / info</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.8} href="/other">other</MotionLink></motion.div>
                 </div>
                 <div className="flex flex-col gap-3">
-                    <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3, ease: easeInOut }}><Link href="/" className="p-2 px-4 hover:bg-[#1a1a1a] hover:text-[#ebebeb] transition-all duration-200 rounded-full">github</Link></motion.div>
-                    <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.2, ease: easeInOut }}><Link href="/contact" className="p-2 px-4 hover:bg-[#1a1a1a] hover:text-[#ebebeb] transition-all duration-200 rounded-full">contact</Link></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={3} href="/github">github</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={3.2} href="/contact">contact</MotionLink></motion.div>
                 </div>
                 <div className="flex gap-3">
                 <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.4, ease: easeInOut }}>
@@ -56,8 +56,8 @@ export default function Navbar() {
                     </div>
             </div>
             <div className="navbar w-full font-bestFont text-[#1a1a1a] sm:text-[2.5vw] sm:flex md:text-[2vw] md:hidden lg:text-[1.5vw] lg:hidden flex">
-                <div className="fixed z-10 flex justify-center items-end">
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }} className=""><button type="button" onClick={toggleNavbar} className="toggle-button w-[70px] h-[70px] bg-[#1a1a1a] rounded-full text-[#ebebeb] cursor-pointer">{isOpen ? '=' : 'x'}</button></motion.div>
+                <div className="fixed top-0 right-0 z-10 w-full flex flex-row justify-end items-center p-5">
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}><button type="button" onClick={toggleNavbar} className="toggle-button w-[70px] h-[70px] bg-[#1a1a1a] rounded-full text-[#ebebeb] cursor-pointer">{isOpen ? '=' : 'x'}</button></motion.div>
                 </div>
                 <motion.div 
                     initial={{ x: -1000 }}
