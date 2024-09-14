@@ -32,14 +32,11 @@ export default function Home() {
         <NavnAnimation />
         <About />
       </div>
-      <div className="w-full flex flex-col justify-center items-center py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-10 md:gap-20">
-          <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-          <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-          <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-          <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-          <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-        </div>
+      <div className="w-full md:h-[100vw] p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
+        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
       </div>
       <div className="w-full h-full overflow-hidden">
         <Footer />
