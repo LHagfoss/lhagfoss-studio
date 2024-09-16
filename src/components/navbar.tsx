@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { motion, easeInOut } from "framer-motion"
-import Link from "next/link";
 import Image from "next/image";
 
 import MotionLink from "@components/motionlink";
