@@ -29,7 +29,7 @@ export default function Navbar() {
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2} href="/">lucas</MotionLink></motion.div>
                 </div> 
                 <div className="flex flex-col">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.2} href="/education">education</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.2} href="/clients">clients</MotionLink></motion.div>
                 </div>
                 <div className="flex flex-col gap-3">
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.4} href="/project">project / work</MotionLink></motion.div>
@@ -68,7 +68,7 @@ export default function Navbar() {
                     className="w-full h-full top-0 left-0 bg-secondary fixed p-[5vw] py-[30vw] font-bestFont text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col"
                 >
                     <div className="flex flex-col">
-                        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.2} href="/education">education</MotionLink></motion.div>
+                        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.2} href="/clients">clients</MotionLink></motion.div>
                         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.4} href="/project">project / work</MotionLink></motion.div>
                         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.6} href="/about">about / info</MotionLink></motion.div>
                         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.8} href="/other">other</MotionLink></motion.div>
