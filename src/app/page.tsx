@@ -11,6 +11,7 @@ import Project from "@components/project";
 
 import projectImage1 from "@assets/googleblablalba.jpg"
 import logoImage1 from "@assets/nextjs.png"
+import projectImage2 from "@assets/image.png"
 
 export default function Home() {
 
@@ -42,9 +43,9 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full md:h-[100vw] p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
+        <Project imageSrc={projectImage2} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
         <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
         <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
       </div>
       <div className="w-full h-full overflow-hidden">
