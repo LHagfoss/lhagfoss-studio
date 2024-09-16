@@ -43,10 +43,10 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full md:h-[100vw] p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
-        <Project imageSrc={projectImage2} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-        <Project imageSrc={projectImage2} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Work Numer One" content="Google Tech Support" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="random title one" content="some random text" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="another title here" content="more random words" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="yet another title" content="even more text" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="final random title" content="last random words" logo={logoImage1} />
       </div>
       <div className="w-full h-full overflow-hidden">
         <Footer />

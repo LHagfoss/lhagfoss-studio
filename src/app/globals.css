@@ -31,3 +31,5 @@ body {
     --radius: 0.5rem;
   }
 }
+
+.scaleMeHover:hover .scaleMe{ scale: 1.1; opacity: 0.5; }

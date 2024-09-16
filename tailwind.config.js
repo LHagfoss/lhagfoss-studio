@@ -29,6 +29,12 @@ module.exports = {
   		fontFamily: {
   			bestFont: 'bestFont'
   		},
+		borderColor: {
+			primary: "#1e1e1e",
+			secondary: "#ebebeb",
+			thirdy: "#474747",
+			fourth: "#111"
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
