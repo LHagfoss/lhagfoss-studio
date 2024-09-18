@@ -86,7 +86,7 @@ export default function Footer() {
                     <div className="w-full border-t border-thirdy flex justify-between pt-10 sm:flex-col md:flex-row lg:flex-row flex-col">
                         <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
                             <div className="text-thirdy">version</div>
-                            <div className=""><Link href="/">lhagfoss - 2024</Link></div>
+                            <div className=""><Link href="/">v0.61 - lhagfoss - 2024</Link></div>
                         </div>
                         <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
                             <div className="text-thirdy">local time</div>

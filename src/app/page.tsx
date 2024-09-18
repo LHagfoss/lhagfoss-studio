@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Lenis from "lenis";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import NavnAnimation from "@components/navn";
 import Navbar from "@components/navbar";
@@ -10,6 +11,7 @@ import About from "@components/about";
 import Footer from "@components/footer";
 import Project from "@components/project";
 
+import arrowDownIcon from "@assets/arrowdown.png"
 import projectImage1 from "@assets/googleblablalba.jpg"
 import logoImage1 from "@assets/nextjs.png"
 import projectImage2 from "@assets/image.png"
@@ -29,10 +31,19 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-[130vh] overflow-hidden">
+      <div className="w-full h-[100vh] overflow-hidden">
         <Navbar />
         <NavnAnimation />
         <About />
+        <motion.div
+          initial={{ y: 0 }}
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 1, repeat: Infinity }}
+          className="absolute bottom-0 right-0 md:m-5 flex items-center"
+          >
+            <div className="">scroll down</div>
+            <Image src={arrowDownIcon} alt="" className="object-cover w-[60px]"></Image>
+          </motion.div> 
       </div>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 3 }}>
         <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
@@ -46,10 +57,10 @@ export default function Home() {
         </div>
       </motion.div>
       <div className="w-full md:h-[100vw] p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
-        <Project imageSrc={projectImage2} title="random title one" content="some random text" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="another title here" content="more random words" logo={logoImage1} />
-        <Project imageSrc={projectImage2} title="yet another title" content="even more text" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="final random title" content="last random words" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="Website / Project #1" content="some random text" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" logo={logoImage1} />
       </div>
       <div className="w-full h-full overflow-hidden">
         <Footer />

@@ -2,7 +2,7 @@ import React from "react";
 import { motion, easeInOut } from "framer-motion";
 
 export default function About() {
-    const text = "I`m Lucas Hagfoss, a user experience & interface designer from Norway, focusing on building functional websites that will increase conversion and help reach customers.";
+    const text = "I`m Lucas Hagfoss, a user interface & user experience designer from Norway, focusing on building functional websites that will increase conversion and help reach customers.";
 
     return (
         <div className="absolute bottom-0 w-[100vw] flex justify-center items-center p-10">
