@@ -6,6 +6,9 @@ import Image from "next/image";
 
 import albumcover from "@assets/polyphiaalbumcover.jpg"
 import nextjs from "@assets/nextjs.png"
+import youtubeIcon from "@assets/youtube.png"
+import twitterIcon from "@assets/twitter.png"
+import instagramIcon from "@assets/instagram.png"
 
 export default function Footer() {
     function getFormattedTime() {
@@ -29,7 +32,7 @@ export default function Footer() {
     return (
         <>
             <div className="w-full h-[100vh] overflow-hidden flex justify-center items-end p-5 md:p-10">
-                <div className="bg-primary w-full h-full md:h-[65vh] rounded-[5vw] md:rounded-[2vw] p-7 md:p-14 text-secondary flex flex-col justify-between">
+                <div className="bg-primary w-full h-full md:h-[65vh] rounded-[5vw] md:rounded-[2vw] p-7 md:p-14 text-secondary flex flex-col justify-between shadow">
                     <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy border-b border-thirdy pb-10 font-bestFont"><span className="text-secondary">Let`s talk </span> about<br/> your project</div>
                         <div className="w-full flex flex-row justify-center md:justify-start">
                         <div className="flex gap-5 md:gap-10">
@@ -93,9 +96,9 @@ export default function Footer() {
                         <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
                             <div className="text-thirdy ">socials</div>
                             <div className="flex gap-5">
-                                <Link href="" className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>instagram</Link>
-                                <Link href="" className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>youtube</Link>
-                                <Link href="" className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"></div>twitter</Link>
+                                <a href="https://instagram.com" target="_blank"  className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"><Image src={instagramIcon} alt="" className="object-fit h-full"></Image></div>instagram</a>
+                                <a href="https://youtube.com" target="_blank" className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"><Image src={youtubeIcon} alt="" className="object-fit h-full"></Image></div>youtube</a>
+                                <a href="https://x.com" target="_blank"  className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"><Image src={twitterIcon} alt="" className="object-fit h-full"></Image></div>twitter</a>
                             </div>
                         </div>
                     </div>
