@@ -24,7 +24,7 @@ export default function Navbar() {
 
     return (
         <div className="navbar top-0 absolute w-[100vw] flex justify-center items-center p-7">
-            <div className="w-full font-bestFont text-[#1a1a1a] justify-between items-start tracking-wide sm:text-[2.5vw] sm:hidden md:text-[2vw] md:flex lg:text-[1.5vw] lg:flex hidden">
+            <div className="w-full text-[#1a1a1a] justify-between items-start tracking-wide sm:text-[2.5vw] sm:hidden md:text-[1.5vw] md:flex lg:flex hidden">
                 <div className="flex flex-col">
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2} href="/">lucas</MotionLink></motion.div>
                 </div> 
@@ -54,7 +54,7 @@ export default function Navbar() {
                     </motion.div>
                     </div>
             </div>
-            <div className="navbar w-full font-bestFont text-[#1a1a1a] sm:text-[2.5vw] sm:flex md:text-[2vw] md:hidden lg:text-[1.5vw] lg:hidden flex">
+            <div className="navbar w-full text-[#1a1a1a] sm:text-[2.5vw] sm:flex md:text-[2vw] md:hidden lg:text-[1.5vw] lg:hidden flex">
                 <div className="fixed top-0 left-0 z-10 w-full flex flex-row justify-start items-center p-5 text-[10vw]">
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2} href="/">lucas</MotionLink></motion.div>
                 </div>

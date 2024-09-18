@@ -29,6 +29,9 @@ module.exports = {
   		fontFamily: {
   			bestFont: 'bestFont'
   		},
+		transitionProperty: {
+			background: "background",
+		},
 		borderColor: {
 			primary: "#1e1e1e",
 			secondary: "#ebebeb",

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import Lenis from "lenis";
+import { motion } from "framer-motion";
 
 import NavnAnimation from "@components/navn";
 import Navbar from "@components/navbar";
@@ -33,15 +34,17 @@ export default function Home() {
         <NavnAnimation />
         <About />
       </div>
-      <div className="flex font-bestFont p-5 md:p-10 text-[7vw] md:text-[5vw]">
-        <div className="w-full flex justify-between items-center">
-          <div className="flex gap-3 md:gap-5">
-            <div className="text-primary">latest</div>
-            <div className="text-thirdy">projects</div>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 3 }}>
+        <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
+          <div className="w-full flex justify-between items-center">
+            <div className="flex gap-3 md:gap-5 font-bestFont">
+              <div className="text-primary">latest</div>
+              <div className="text-thirdy">projects</div>
+            </div>
+            <button type="button" className="text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-10 p-6 hover:bg-[#0000004d] transition-background duration-200">see all</button>
           </div>
-          <button type="button" className="text-[4vw] md:text-[2vw] border-2 border-primary rounded-full px-7 p-4">see all</button>
         </div>
-      </div>
+      </motion.div>
       <div className="w-full md:h-[100vw] p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
         <Project imageSrc={projectImage2} title="random title one" content="some random text" logo={logoImage1} />
         <Project imageSrc={projectImage1} title="another title here" content="more random words" logo={logoImage1} />
