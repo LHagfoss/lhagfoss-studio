@@ -28,7 +28,7 @@ export default function Footer() {
 
     return (
         <>
-            <div className="w-full h-[100vh] overflow-hidden flex justify-center items-end p-5 md:p-10 font-bestFont">
+            <div className="w-full h-[100vh] overflow-hidden flex justify-center items-end p-5 md:p-10">
                 <div className="bg-primary w-full h-full md:h-[65vh] rounded-[5vw] md:rounded-[2vw] p-7 md:p-14 text-secondary flex flex-col justify-between">
                     <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy border-b border-thirdy pb-10 font-bestFont"><span className="text-secondary">Let`s talk </span> about<br/> your project</div>
                         <div className="w-full flex flex-row justify-center md:justify-start">
@@ -36,7 +36,7 @@ export default function Footer() {
                             <div className="flex flex-col gap-3">
                                 <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
                                     <div className="">coding</div>
-                                    <div className="bg-thirdy p-1 px-4 rounded-full">currently</div>
+                                    <div className="bg-thirdy p-1 px-4 rounded-full text-[#999]">currently</div>
                                 </div>
                                 <div className="flex justify-center items-center gap-5 flex-col md:flex-row">
                                     <div className="w-[20vw] md:w-[10vw] aspect-square rounded-[1vw] overflow-hidden">
@@ -51,7 +51,7 @@ export default function Footer() {
                             <div className="flex flex-col gap-3">
                                 <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
                                     <div className="">listening to</div>
-                                    <div className="bg-thirdy p-1 px-4 rounded-full">5 hours ago</div>
+                                    <div className="bg-thirdy p-1 px-4 rounded-full text-[#999]">5 hours ago</div>
                                 </div>
                                 <div className="flex justify-center items-center gap-5 flex-col md:flex-row">
                                     <div className="w-[20vw] md:w-[10vw] aspect-square rounded-[1vw] overflow-hidden">
@@ -66,7 +66,7 @@ export default function Footer() {
                             <div className="flex flex-col gap-3">
                                 <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
                                     <div className="">watching</div>
-                                    <div className="bg-thirdy p-1 px-4 rounded-full">NaN</div>
+                                    <div className="bg-thirdy p-1 px-4 rounded-full text-[#999]">NaN</div>
                                 </div>
                                 <div className="flex justify-center items-center gap-5 flex-col md:flex-row ">
                                     <div className="w-[20vw] md:w-[10vw] aspect-square rounded-[1vw] overflow-hidden bg-thirdy">

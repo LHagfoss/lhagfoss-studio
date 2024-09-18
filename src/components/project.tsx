@@ -25,7 +25,7 @@ export default function Project({ imageSrc, title, content, logo }: ProjectProps
             >
                 <Image src={imageSrc} alt="" className="absolute inset-0 w-full h-full object-cover rounded-[1vw] bg-thirdy scaleMe duration-1000" />
                 <div className="flex justify-between items-center relative z-10 bg-primary rounded-[5vw] md:rounded-[2vw] p-5">
-                    <div className="flex flex-col md:m-5 font-bestFont">
+                    <div className="flex flex-col md:m-5">
                         <div className="text-secondary text-[4vw] md:text-[2vw]">{title}</div>
                         <div className="text-thirdy text-[3vw] md:text-[1vw]">{content}</div>
                     </div>
