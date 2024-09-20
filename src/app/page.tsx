@@ -5,6 +5,7 @@ import Lenis from "lenis";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import ImageSection from "@/components/imageSection";
 import NavnAnimation from "@components/navn";
 import Navbar from "@components/navbar";
 import About from "@components/about";
@@ -35,16 +36,19 @@ export default function Home() {
         <Navbar />
         <NavnAnimation />
         <About />
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 1, repeat: Infinity }}
-          className="absolute bottom-0 right-0 md:m-5 flex items-center"
-          >
-            <div className="">scroll down</div>
-            <Image src={arrowDownIcon} alt="" className="object-cover w-[60px]"></Image>
-          </motion.div> 
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 5 }} className="absolute bottom-[30vh] left-[50vw] transform translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0 md:bottom-5 md:right-10 flex items-center justify-end">
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 1, repeat: Infinity }}
+            className="flex items-center"
+            >
+              <div className="">scroll down</div>
+              <Image src={arrowDownIcon} alt="" className="object-cover w-[60px]"></Image>
+            </motion.div> 
+          </motion.div>
       </div>
+      <ImageSection />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 3 }}>
         <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
