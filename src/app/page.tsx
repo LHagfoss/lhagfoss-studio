@@ -49,7 +49,7 @@ export default function Home() {
           </motion.div>
       </div>
       <ImageSection />
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 3 }}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 4 }}>
         <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
             <div className="flex gap-3 md:gap-5 font-bestFont">

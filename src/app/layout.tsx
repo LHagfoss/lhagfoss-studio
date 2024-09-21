@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LHagfoss | Home",
+  title: "LHagfoss - Home",
   description: "Developed by Lucas Hagfoss",
   openGraph: {
     title: "LHagfoss | Home",
