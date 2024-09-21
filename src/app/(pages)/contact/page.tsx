@@ -20,9 +20,9 @@ export default function Home() {
     requestAnimationFrame(raf)
   }, [])
 
-  const text1Part1 = "Let's create something";
+  const text1Part1 = "Let`s create something";
   const text1Part2 = "remarkable together.";
-  const text2 = "Send me a message so we can start working together. Tell me your vision and goals and I will create extraordinary website for you I`m looking forward to  cooperation."
+  const text2 = "Send me a message so we can start working together. Tell me your vision and goals and I will create extraordinary website for you I`m looking forward to cooperation."
 
   return (
     <>
