@@ -31,6 +31,7 @@ module.exports = {
 			  clashDisM: "clashDisplay-medium", 
 			  bricoGrotSB: "bricolageGrotesque-semibold",
 			  bricoGrotR: "bricolageGrotesque-regular",
+			  bricoGrotEB: "bricolageGrotesque-bold",
   		},
 		transitionProperty: {
 			background: "background",

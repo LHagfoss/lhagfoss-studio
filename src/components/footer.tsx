@@ -33,7 +33,7 @@ export default function Footer() {
         <>
             <div className="w-full h-[100vh] md:h-[70vh] overflow-hidden flex justify-center items-end p-5 md:p-10">
                 <div className="bg-primary w-full h-full md:h-[65vh] rounded-[5vw] md:rounded-[2vw] p-7 md:p-14 text-secondary flex flex-col justify-between shadow font-bricoGrotR">
-                    <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy border-b border-thirdy pb-10 font-clashDisM"><span className="text-secondary">Let's talk </span> about<br/> your project</div>
+                    <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy border-b border-thirdy pb-10 font-clashDisM"><span className="text-secondary">Let`s talk </span> about<br/> your project</div>
                         <div className="w-full flex flex-row justify-center md:justify-start">
                         <div className="flex gap-5 md:gap-10">
                             <div className="flex flex-col gap-3">

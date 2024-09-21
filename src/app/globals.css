@@ -35,6 +35,11 @@ body {
 }
 
 @font-face {
+  font-family: "bricolageGrotesque-bold";
+  src: url(fonts/BRICOLAGEGROTESQUE-EXTRABOLD.TTF);
+}
+
+@font-face {
   font-family: "bricolageGrotesque-regular";
   src: url(fonts/BRICOLAGEGROTESQUE-REGULAR.TTF);
 }
