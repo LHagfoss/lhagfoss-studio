@@ -15,7 +15,7 @@ export default function ImageSection() {
                 <div className="w-[100vw] h-[50vh] p-5 md:p-10 relative">
                     <div className="w-full h-full rounded-[2vw] overflow-hidden relative">
                         <Image src={chosenImage} alt="" className="absolute inset-0 w-full h-full object-cover rounded-[2vw] overflow-hidden" />
-                        <div className="w-full h-full flex md:justify-end justify-center items-end relative text-secondary font-bestFont text-[7vw] p-2 md:text-[2vw] md:px-8 md:py-3">
+                        <div className="w-full h-full flex md:justify-end justify-center items-end relative text-secondary font-clashDisM text-[5vw] p-2 md:text-[2vw] md:px-8 md:py-3">
                             a cool image
                         </div>
                     </div>

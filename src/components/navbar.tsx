@@ -24,21 +24,21 @@ export default function Navbar() {
 
     return (
         <div className="navbar top-0 absolute w-[100vw] flex justify-center items-center p-7">
-            <div className="w-full text-[#1a1a1a] justify-between items-start tracking-wide sm:text-[2.5vw] sm:hidden md:text-[1.5vw] md:flex lg:flex hidden">
+            <div className="w-full text-[#1a1a1a] justify-between items-start tracking-wide sm:text-[2.5vw] sm:hidden md:text-[1.5vw] md:flex lg:flex hidden font-bricoGrotM">
                 <div className="flex flex-col">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2} href="/">lucas</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2} href="/">Lucas</MotionLink></motion.div>
                 </div> 
                 <div className="flex flex-col">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.2} href="/clients">clients</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.2} href="/clients">Clients</MotionLink></motion.div>
                 </div>
                 <div className="flex flex-col gap-3">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.4} href="/projects">projects / work</MotionLink></motion.div>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.6} href="/about">about / info</MotionLink></motion.div>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.8} href="/other">other</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.4} href="/projects">Projects / Work</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.6} href="/about">About / Info</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2.8} href="/other">Other</MotionLink></motion.div>
                 </div>
                 <div className="flex flex-col gap-3">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={3} href="/github">github</MotionLink></motion.div>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={3.2} href="/contact">contact</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={3} href="/github">Github</MotionLink></motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={3.2} href="/contact">Contact</MotionLink></motion.div>
                 </div>
                 <div className="flex gap-3">
                 <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.4, ease: easeInOut }}>

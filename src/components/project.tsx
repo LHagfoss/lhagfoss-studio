@@ -21,7 +21,7 @@ export default function Project({ imageSrc, title, content, logo }: ProjectProps
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, ease: easeInOut}}
-                className="aspect-square relative overflow-hidden bg-primary rounded-[5vw] md:rounded-[2vw] flex flex-col justify-end cursor-pointer shadow-2xl scaleMeHover"
+                className="aspect-square relative overflow-hidden bg-primary rounded-[5vw] md:rounded-[2vw] flex flex-col justify-end cursor-pointer shadow-2xl scaleMeHover font-bricoGrotR"
             >
                 <Image src={imageSrc} alt="" className="absolute inset-0 w-full h-full object-cover rounded-[1vw] bg-thirdy scaleMe duration-1000" />
                 <div className="flex justify-between items-center relative z-10 bg-primary rounded-[5vw] md:rounded-[2vw] p-5">

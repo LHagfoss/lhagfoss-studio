@@ -27,7 +27,10 @@ module.exports = {
 			fourth: "#111"
   		},
   		fontFamily: {
-  			bestFont: 'bestFont'
+  			bestFont: 'bestFont',
+			  clashDisM: "clashDisplay-medium", 
+			  bricoGrotSB: "bricolageGrotesque-semibold",
+			  bricoGrotR: "bricolageGrotesque-regular",
   		},
 		transitionProperty: {
 			background: "background",

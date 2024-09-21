@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-[100vh] overflow-hidden">
+      <div className="w-full h-[100vh] overflow-hidden font-bricoGrotR">
         <Navbar />
         <NavnAnimation />
         <About />
@@ -43,20 +43,20 @@ export default function Home() {
             transition={{ duration: 1, repeat: Infinity }}
             className="flex items-center"
             >
-              <div className="">scroll down</div>
+              <div className="">Scroll down</div>
               <Image src={arrowDownIcon} alt="" className="object-cover w-[60px]"></Image>
             </motion.div> 
           </motion.div>
       </div>
       <ImageSection />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 4 }}>
-        <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
+        <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw] font-bricoGrotR">
           <div className="w-full flex justify-between items-center">
-            <div className="flex gap-3 md:gap-5 font-bestFont">
-              <div className="text-primary">latest</div>
+            <div className="flex gap-3 md:gap-5 font-clashDisM">
+              <div className="text-primary">Latest</div>
               <div className="text-thirdy">projects</div>
             </div>
-            <button type="button" className="text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-10 p-6 hover:bg-[#0000004d] transition-background duration-200">see all</button>
+            <button type="button" className="text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-10 p-6 hover:bg-[#0000004d] transition-background duration-200">See all</button>
           </div>
         </div>
       </motion.div>

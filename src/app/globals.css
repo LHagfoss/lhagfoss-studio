@@ -24,6 +24,21 @@ body {
   src: url(./fonts/Blanquotey.ttf);
 }
 
+@font-face {
+  font-family: "clashDisplay-medium";
+  src: url(fonts/CLASHDISPLAY-MEDIUM.OTF);
+}
+
+@font-face {
+  font-family: "bricolageGrotesque-semibold";
+  src: url(fonts/BRICOLAGEGROTESQUE-SEMIBOLD.TTF);
+}
+
+@font-face {
+  font-family: "bricolageGrotesque-regular";
+  src: url(fonts/BRICOLAGEGROTESQUE-REGULAR.TTF);
+}
+
 .navbar { z-index: 999; }
 
 @layer base {
