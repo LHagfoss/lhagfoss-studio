@@ -16,23 +16,29 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     };
 
-    const copyEmail = (event:any) => {
+    const copyEmail = (event: React.MouseEvent<HTMLDivElement>) => {
         navigator.clipboard.writeText("lucash.1707@gmail.com");
         setShowPopup(true);
         setPopupPosition({ x: event.clientX, y: event.clientY });
         setTimeout(() => setShowPopup(false), 2000);
     };
 
-    const handleMouseMove = (event:any) => {
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         if (showPopup) {
             setPopupPosition({ x: event.clientX, y: event.clientY });
         }
     };
 
     useEffect(() => {
-        window.addEventListener("mousemove", handleMouseMove);
+        const handleMouseMoveEffect = (event: MouseEvent) => {
+            if (showPopup) {
+                setPopupPosition({ x: event.clientX, y: event.clientY });
+            }
+        };
+
+        window.addEventListener("mousemove", handleMouseMoveEffect);
         return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
+            window.removeEventListener("mousemove", handleMouseMoveEffect);
         };
     }, [showPopup]);
 

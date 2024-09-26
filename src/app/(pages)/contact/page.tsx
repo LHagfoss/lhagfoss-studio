@@ -93,30 +93,30 @@ export default function Home() {
             <form onSubmit={handleSubmit} className="flex flex-col space-y-4 w-full mb-10 resize-none">
               <div className="w-full border-b border-thirdy">
                 <div className="">Your Name</div>
-                <input type="text" name="name" placeholder="Your Name..." value={formData.name} onChange={handleChange} className="flex justify-start items-start w-full border h-[30vh] md:h-[10vh]" required />
+                <input type="text" name="name" placeholder="Your Name..." value={formData.name} onChange={handleChange} className="bg-[#ebebeb] w-full h-[10vh] md:h-[10vh] focus:outline-none" required />
               </div>
               <div className="w-full border-b border-thirdy">
                 <div className="">Your Email</div>
-                <input type="email" name="email" placeholder="Your Email..." value={formData.email} onChange={handleChange} className="w-full border h-[30vh] md:h-[10vh]" required />
+                <input type="email" name="email" placeholder="Your Email..." value={formData.email} onChange={handleChange} className="bg-[#ebebeb] w-full h-[10vh] md:h-[10vh] focus:outline-none" required />
               </div>
               <div className="w-full border-b border-thirdy">
-                <div className="">Your Password</div>
-                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="w-full border h-[30vh] md:h-[10vh]" required />
+                <div className="">Your Message</div>
+                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-[#ebebeb] w-full h-[20vh] md:h-[10vh] focus:outline-none" required />
               </div>
               <button type="submit" className="bg-primary text-white p-2 py-5 w-1/5 rounded-full">Send Message</button>
             </form>
 
-            <div className="w-full border-t border-thirdy flex pt-10 flex-col md:flex-col gap-32">
-              <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
+            <div className="w-full flex pt-10 flex-col md:flex-col gap-32">
+              <div className="text-[3vw] sm:text-[3vw] md:text-[1vw]">
                   <div className="text-thirdy">Version</div>
                   <div className=""><Link href="/">v0.61 - LHagfoss - 2024</Link></div>
               </div>
-              <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
+              <div className="text-[3vw] sm:text-[3vw] md:text-[1vw]">
                   <div className="text-thirdy">Local time</div>
                   <div className="" onClick={updateTime}>{time}</div>
               </div>
 
-              <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
+              <div className="text-[3vw] sm:text-[3vw] md:text-[1vw]">
                   <div className="text-thirdy ">Socials</div>
                   <div className="flex flex-col gap-5">
                       <a href="https://instagram.com" target="_blank"  className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"><Image src={instagramIcon} alt="" className="object-fit h-full"></Image></div>Instagram</a>
