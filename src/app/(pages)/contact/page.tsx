@@ -53,24 +53,25 @@ export default function Home() {
         minute: '2-digit', 
         hour12: false 
     };
-    const timeString = now.toLocaleTimeString('en-GB', options);
-    return `${timeString} UTC + 1 kristiansand, norway`;
+    const timeString = now.toLocaleTimeString('en-GB', options)
+    return `${timeString} UTC + 1 kristiansand, norway`
   }
 
   const updateTime = () => {
-      setTime(getFormattedTime());
+      setTime(getFormattedTime())
   };
 
-  const text1Part1 = "Let`s create something";
-  const text1Part2 = "remarkable together.";
-  const text2 = "Send me a message so we can start working together. Tell me your vision and goals and I will create extraordinary website for you I`m looking forward to cooperation."
+  const text1Part1 = "Let`s create something"
+  const text1Part2 = "remarkable together."
+  const text2Part1 = "Send me a message so we can start working together. Tell me your vision and goals and I will create extraordinary website for you!"
+  const text2Part2 = "I`m looking forward to cooperation."
 
   return (
     <>
       <Navbar />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2, duration: 1, ease: easeInOut }} className="w-[100vw] h-[100vh] flex justify-center items-center">
         <div className="w-full h-full flex flex-col md:flex-row">
-          <div className="md:flex-1 flex flex-col leading-3 md:leading-10 border border-black p-4 py-10 md:p-20 md:py-52">
+          <div className="md:flex-1 flex flex-col leading-3 p-4 py-10 md:p-20 md:py-20">
             <div className="flex flex-col">
               <div className="flex overflow-hidden pb-5">
                 {text1Part1.split(" ").map((word, index) => (
@@ -83,34 +84,35 @@ export default function Home() {
                 ))}
               </div>
               <div className="flex flex-wrap flex-row w-[35vw] leading-7">
-                {text2.split(" ").map((word, index) => (
+                {text2Part1.split(" ").map((word, index) => (
                   <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3 + index * 0.01, ease: easeInOut }} className="px-1 text-thirdy font-bricoGrotSB text-[5vw] md:text-[1vw]">{word}</motion.div>
+                ))}
+              </div>
+              <div className="flex flex-wrap flex-row w-[35vw] leading-7 mt-10">
+                {text2Part2.split(" ").map((word, index) => (
+                  <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.5 + index * 0.01, ease: easeInOut }} className="px-1 text-thirdy font-bricoGrotSB text-[5vw] md:text-[1vw]">{word}</motion.div>
                 ))}
               </div>
             </div>
           </div>
-          <div className="flex-1 flex flex-col overflow-hidden border border-black p-4 md:p-20 md:py-52">
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-4 w-full mb-10 resize-none">
-              <div className="w-full border-b border-thirdy">
-                <div className="">Your Name</div>
-                <input type="text" name="name" placeholder="Your Name..." value={formData.name} onChange={handleChange} className="bg-[#ebebeb] w-full h-[10vh] md:h-[10vh] focus:outline-none" required />
+          <div className="flex-1 flex flex-col overflow-hidden p-4 md:p-20 md:py-20">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-10 w-full mb-10 resize-none font-bricoGrotR">
+              <div className="w-full ">
+                <div className="md:text-[1.3vw]">Name</div>
+                <input type="text" name="name" placeholder="Your Name..." value={formData.name} onChange={handleChange} className="flex bg-[#ebebeb] w-full outline-none pb-10 border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy  focus:placeholder:text-primary" required />
               </div>
-              <div className="w-full border-b border-thirdy">
-                <div className="">Your Email</div>
-                <input type="email" name="email" placeholder="Your Email..." value={formData.email} onChange={handleChange} className="bg-[#ebebeb] w-full h-[10vh] md:h-[10vh] focus:outline-none" required />
+              <div className="w-full">
+                <div className="md:text-[1.3vw]">Email</div>
+                <input type="email" name="email" placeholder="Your Email..." value={formData.email} onChange={handleChange} className="bg-[#ebebeb] w-full outline-none pb-10 border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy focus:placeholder:text-primary" required />
               </div>
-              <div className="w-full border-b border-thirdy">
-                <div className="">Your Message</div>
-                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-[#ebebeb] w-full h-[20vh] md:h-[10vh] focus:outline-none" required />
+              <div className="w-full">
+                <div className="md:text-[1.3vw]">Message</div>
+                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-[#ebebeb] w-full outline-none border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy focus:placeholder:text-primary" required />
               </div>
-              <button type="submit" className="bg-primary text-white p-2 py-5 w-1/5 rounded-full">Send Message</button>
+              <button type="submit" className="bg-primary text-white p-3 px-5 w-1/4 rounded-full">Send Message</button>
             </form>
 
-            <div className="w-full flex pt-10 flex-col md:flex-col gap-32">
-              <div className="text-[3vw] sm:text-[3vw] md:text-[1vw]">
-                  <div className="text-thirdy">Version</div>
-                  <div className=""><Link href="/">v0.61 - LHagfoss - 2024</Link></div>
-              </div>
+            <div className="w-full flex flex-col md:flex-col gap-10">
               <div className="text-[3vw] sm:text-[3vw] md:text-[1vw]">
                   <div className="text-thirdy">Local time</div>
                   <div className="" onClick={updateTime}>{time}</div>
