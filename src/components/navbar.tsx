@@ -23,12 +23,6 @@ export default function Navbar() {
         setTimeout(() => setShowPopup(false), 2000);
     };
 
-    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-        if (showPopup) {
-            setPopupPosition({ x: event.clientX, y: event.clientY });
-        }
-    };
-
     useEffect(() => {
         const handleMouseMoveEffect = (event: MouseEvent) => {
             if (showPopup) {
