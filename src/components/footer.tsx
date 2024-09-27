@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import albumcover from "@assets/polyphiaalbumcover.jpg"
+import albumcover from "@assets/image (1).png"
 import nextjs from "@assets/nextjs.png"
 import youtubeIcon from "@assets/youtube.png"
 import twitterIcon from "@assets/twitter.png"
@@ -23,6 +23,9 @@ export default function Footer() {
         return `${timeString} UTC + 1 kristiansand, norway`;
     }
 
+    function openLinkNextJS() { window.open("https://nextjs.org/") }
+    function openLinkCigarettesAfterSex() { window.open("https://open.spotify.com/track/0yc6Gst2xkRu0eMLeRMGCX?nd=1&dlsi=c54863917c2442e1") }
+
     const [time, setTime] = useState(getFormattedTime());
 
     const updateTime = () => {
@@ -36,8 +39,8 @@ export default function Footer() {
                     <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy border-b border-thirdy pb-10 font-clashDisM"><span className="text-secondary">Let`s talk </span> about<br/> your project</div>
                         <div className="w-full flex flex-row justify-center md:justify-start">
                         <div className="flex gap-5 md:gap-10">
-                            <div className="flex flex-col gap-3">
-                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
+                            <div className="flex flex-col gap-3 cursor-pointer" onClick={openLinkNextJS}>
+                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.7vw]">
                                     <div className="">Coding</div>
                                     <div className="bg-thirdy p-1 px-4 rounded-full text-[#999]">Currently</div>
                                 </div>
@@ -51,8 +54,8 @@ export default function Footer() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-3">
-                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
+                            <div className="flex flex-col gap-3 cursor-pointer" onClick={openLinkCigarettesAfterSex}>
+                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.7vw]">
                                     <div className="">Listening to</div>
                                     <div className="bg-thirdy p-1 px-4 rounded-full text-[#999]">5 hours ago</div>
                                 </div>
@@ -61,39 +64,24 @@ export default function Footer() {
                                         <Image src={albumcover} alt="" className="object-cover w-full h-full"></Image>
                                     </div>
                                     <div className="">
-                                        <div className="text-secondary text-[3vw] md:text-[0.8vw]">Playing Goat</div>
-                                        <div className="text-thirdy text-[2vw] md:text-[0.7vw]">Polyphia</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-3">
-                                <div className="flex items-center gap-1 flex-col md:gap-3 md:flex-row text-[2vw] md:text-[0.8vw]">
-                                    <div className="">Watching</div>
-                                    <div className="bg-thirdy p-1 px-4 rounded-full text-[#999]">NaN</div>
-                                </div>
-                                <div className="flex justify-center items-center gap-5 flex-col md:flex-row ">
-                                    <div className="w-[20vw] md:w-[10vw] aspect-square rounded-[1vw] overflow-hidden bg-thirdy">
-                                        {/* <Image src={albumcover} alt="" className="object-cover"></Image> */}
-                                    </div>
-                                    <div className="">
-                                        <div className="text-secondary text-[3vw] md:text-[0.8vw]">NaN</div>
-                                        <div className="text-thirdy text-[2vw] md:text-[0.7vw]">NaN</div>
+                                        <div className="text-secondary text-[3vw] md:text-[0.8vw]">Apocalypse</div>
+                                        <div className="text-thirdy text-[2vw] md:text-[0.7vw]">Cigarettes After Sex</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="w-full border-t border-thirdy flex justify-between pt-10 sm:flex-col md:flex-row lg:flex-row flex-col">
-                        <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
+                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw]">
                             <div className="text-thirdy">Version</div>
-                            <div className=""><Link href="/">v0.61 - LHagfoss - 2024</Link></div>
+                            <div className="">v0.61 - LHagfoss - 2024</div>
                         </div>
-                        <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
+                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw]">
                             <div className="text-thirdy">Local time</div>
                             <div className="" onClick={updateTime}>{time}</div>
                         </div>
 
-                        <div className="text-[3vw] sm:text-[3vw] md:text-[1vw] lg:test-[1vw]">
+                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw]">
                             <div className="text-thirdy ">Socials</div>
                             <div className="flex gap-5">
                                 <a href="https://instagram.com" target="_blank"  className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"><Image src={instagramIcon} alt="" className="object-fit h-full"></Image></div>Instagram</a>
