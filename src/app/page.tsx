@@ -32,8 +32,8 @@ export default function Home() {
 
   return (
     <>
+      <Navbar />
       <div className="w-full h-[100vh] overflow-hidden font-bricoGrotR">
-        <Navbar />
         <NavnAnimation />
         <About />
         <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 5 }} className="absolute bottom-[30vh] left-[50vw] transform translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0 md:bottom-5 md:right-10 flex items-center justify-end">

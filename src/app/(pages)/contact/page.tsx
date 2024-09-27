@@ -5,7 +5,6 @@ import emailjs from 'emailjs-com';
 import Lenis from "lenis"
 import { motion, easeInOut } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link"
 
 import Navbar from "@components/navbar"
 import Footer from "@components/footer"
@@ -107,7 +106,7 @@ export default function Home() {
               </div>
               <div className="w-full">
                 <div className="md:text-[1.3vw]">Message</div>
-                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-[#ebebeb] w-full outline-none border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy focus:placeholder:text-primary" required />
+                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-[#ebebeb] w-full min-h-[20vh] outline-none border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy focus:placeholder:text-primary" required />
               </div>
               <button type="submit" className="bg-primary text-white p-3 px-5 w-1/4 rounded-full">Send Message</button>
             </form>

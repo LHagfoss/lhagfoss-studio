@@ -45,6 +45,7 @@ body {
 }
 
 .navbar { z-index: 999; }
+.over { z-index: 9991; }
 
 @layer base {
   :root {
