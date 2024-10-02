@@ -17,7 +17,7 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     };
 
-    const copyEmail = (event: React.MouseEvent<HTMLDivElement>) => {
+    const copyEmail = () => {
         navigator.clipboard.writeText("lucash.1707@gmail.com");
         setShowPopup(true);
         setTimeout(() => setShowPopup(false), 3000);
