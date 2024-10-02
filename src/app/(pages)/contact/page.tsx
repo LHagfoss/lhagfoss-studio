@@ -6,8 +6,8 @@ import Lenis from "lenis"
 import { motion, easeInOut } from "framer-motion"
 import Image from "next/image"
 
-import Navbar from "@components/navbar"
-import Footer from "@components/footer"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 
 import instagramIcon from "@assets/instagram.png"
 import youtubeIcon from "@assets/youtube.png"

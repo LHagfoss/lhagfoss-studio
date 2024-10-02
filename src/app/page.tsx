@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import ImageSection from "@/components/imageSection";
-import NavnAnimation from "@components/navn";
-import Navbar from "@components/navbar";
-import About from "@components/about";
-import Footer from "@components/footer";
-import Project from "@components/project";
+import NavnAnimation from "@/components/navn";
+import Navbar from "@/components/navbar";
+import About from "@/components/about";
+import Footer from "@/components/footer";
+import Project from "@/components/project";
 
 import arrowDownIcon from "@assets/arrowdown.png"
 import projectImage1 from "@assets/googleblablalba.jpg"

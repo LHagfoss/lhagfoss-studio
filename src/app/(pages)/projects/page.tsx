@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, easeInOut } from "framer-motion"
 
-import Navbar from "@components/navbar";
+import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export default function Home() {

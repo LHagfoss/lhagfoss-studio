@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, easeInOut } from "framer-motion"
 import Image from "next/image";
 
-import MotionLink from "@components/motionlink";
+import MotionLink from "@/components/motionlink";
 import logo from "../app/favicon.ico"
 import copy from "@assets/copy.svg"
 
