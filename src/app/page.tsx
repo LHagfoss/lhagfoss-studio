@@ -12,10 +12,10 @@ import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
 
-import arrowDownIcon from "@assets/arrowdown.png"
-import projectImage1 from "@assets/googleblablalba.jpg"
-import logoImage1 from "@assets/nextjs.png"
-import projectImage2 from "@assets/image.png"
+import arrowDownIcon from "@/assets/arrowdown.png"
+import projectImage1 from "@/assets/googleblablalba.jpg"
+import logoImage1 from "@/assets/nextjs.png"
+import projectImage2 from "@/assets/image.png"
 
 export default function Home() {
 
@@ -56,7 +56,7 @@ export default function Home() {
               <div className="text-primary">Latest</div>
               <div className="text-thirdy">projects</div>
             </div>
-            <button type="button" className="text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-10 p-6 hover:bg-[#0000004d] transition-background duration-200">See all</button>
+            <button type="button" className="text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-5 md:px-10 p-2 md:p-6 hover:bg-[#0000004d] transition-background duration-200">See all</button>
           </div>
         </div>
       </motion.div>

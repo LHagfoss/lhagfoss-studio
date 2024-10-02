@@ -9,9 +9,9 @@ import Image from "next/image"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
-import instagramIcon from "@assets/instagram.png"
-import youtubeIcon from "@assets/youtube.png"
-import twitterIcon from "@assets/twitter.png"
+import instagramIcon from "@/assets/instagram.png"
+import youtubeIcon from "@/assets/youtube.png"
+import twitterIcon from "@/assets/twitter.png"
 
 export default function Home() {
   const [time, setTime] = useState(getFormattedTime());
