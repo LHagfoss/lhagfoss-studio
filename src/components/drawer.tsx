@@ -66,7 +66,7 @@ export function DrawerDemo() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline" className="bg-primary text-[#ebebeb]">Open Drawer</Button>
+        <Button variant="outline" className="bg-primary text-[#ebebeb]">Open Github Repository</Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">

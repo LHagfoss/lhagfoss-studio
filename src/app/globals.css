@@ -46,7 +46,7 @@ body {
   content: '';
   position: absolute;
   width: 0;
-  height: 1px;
+  height: 2px;
   bottom: 0;
   left: 0;
   background-color: currentColor;

@@ -10,7 +10,7 @@ import logo from "../app/favicon.ico"
 import copy from "@/assets/copy.svg"
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
 
     const toggleNavbar = () => {
@@ -52,35 +52,35 @@ export default function Navbar() {
             </div>
 
             {/* Navbar for small screens */}
-            <div className="flex md:hidden w-full text-[#1a1a1a] bg-white z-20 font-bricoGrotM">
-                <div className="fixed top-0 left-0 z-40 flex flex-row justify-start items-center p-5 text-[10vw] w-1/2 font-bestFont">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><MotionLink delay={2} href="/">lucas</MotionLink></motion.div>
+            <div className="flex md:hidden w-[100vw] h-[100vh] text-[#1a1a1a] bg-white z-20 font-bricoGrotM text-secondary">
+                <div className={`fixed top-0 left-0 z-40 flex flex-row justify-start items-center p-5 text-[10vw] w-1/2 font-bestFont duration-1000 ease-in-out ${isOpen ? 'text-secondary' : 'text-primary'}`}>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}><Link href="/">lucas</Link></motion.div>
                 </div>
                 <div className="fixed top-0 right-0 z-30 w-full flex flex-row justify-end items-center p-5">
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}><button type="button" onClick={toggleNavbar} className="toggle-button w-[70px] h-[70px] bg-[#1a1a1a] rounded-full text-[#ebebeb] cursor-pointer">{isOpen ? '=' : 'x'}</button></motion.div>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}>
+                        <button type="button" onClick={toggleNavbar} className={`toggle-button w-[70px] h-[70px]  rounded-full cursor-pointer duration-1000 ease-in-out ${isOpen ? 'bg-secondary text-[#1a1a1a]' : 'text-secondary bg-[#1a1a1a]'}`}>{isOpen ? 'Close' : 'Open'}</button>
+                    </motion.div>
                 </div>
                 <motion.div 
-                    initial={{ x: -1000 }}
-                    animate={{ x: isOpen ? 0 : 1000 }}
+                    initial={{ x: -1000, opacity: 0 }}
+                    animate={{ x: isOpen ? 0 : 1000, opacity: isOpen ? 1 : 0 }}
                     transition={{ duration: 1, ease: easeInOut }}
-                    className="z-20 w-full h-full top-0 left-0 bg-secondary fixed p-[5vw] py-[30vw]  text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col"
+                    className="z-20 w-full h-full top-0 left-0 bg-primary fixed p-[5vw] py-[30vw] text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col"
                 >
-                    <div className="flex flex-col">
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.2, ease: easeInOut }}><Link href="/clients" className="p-2 hoverMe relative transition-all duration-200 rounded-full">Clients</Link></motion.div>
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.3, ease: easeInOut }}><Link href="/projects" className="p-2 hoverMe relative transition-all duration-200 rounded-full">Projects / Work</Link></motion.div>
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.4, ease: easeInOut }}><Link href="/about" className="p-2 hoverMe relative transition-all duration-200 rounded-full">About / Info</Link></motion.div>
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5, ease: easeInOut }}><Link href="/other" className="p-2 hoverMe relative transition-all duration-200 rounded-full">Other</Link></motion.div>
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.6, ease: easeInOut }}><Link href="/github" className="p-2 hoverMe relative transition-all duration-200 rounded-full">Github</Link></motion.div>
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.7, ease: easeInOut }}><Link href="/contact" className="p-2 hoverMe relative transition-all duration-200 rounded-full">Contact</Link></motion.div>
-                        <motion.div initial={{ x: -400 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.8, ease: easeInOut }}>
-                            <div onClick={copyEmail} className="bg-primary text-secondary p-3 px-6 rounded-full flex items-center gap-3 border text-[4vw]">
-                                <Image src={copy} alt=""></Image>
-                                <div className="">lucash.1707@gmail.com</div>
-                                {showPopup && (
-                                <div className="absolute bottom-48 transform mt-20 bg-primary rounded-full text-white p-2 px-5 flex justify-center text-[3vw]">copied email</div>
-                            )}
-                            </div>
-                        </motion.div>
+                    <div className="flex flex-1 gap-3 flex-col text-secondary">
+                        <Link href="/clients" className="">Clients</Link>
+                        <Link href="/projects" className="">Projects / Work</Link>
+                        <Link href="/about" className="">About / Info</Link>
+                        <Link href="/other" className="">Other</Link>
+                        <Link href="/github" className="">Github</Link>
+                        <Link href="/contact" className="">Contact</Link>
+                        <div onClick={copyEmail} className="bg-secondary text-primary p-3 px-6 rounded-full flex items-center gap-3 border text-[5vw]">
+                            <Image src={copy} alt=""></Image>
+                            <div className="">Copy my E-Mail</div>
+                        </div>
+                        {showPopup && (
+                            <div className="rounded-full text-secondary p-3 px-6 flex justify-center text-[4vw]">Copied email!</div>
+                        )}
                     </div>
                 </motion.div>
             </div>
