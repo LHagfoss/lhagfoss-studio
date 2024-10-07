@@ -31,6 +31,7 @@ export default function Navbar() {
                     <a href="/"><motion.div initial={{ y: -250 }} animate={{  y: 0 }} transition={{ duration: 1.5, delay: 0.1, ease: easeInOut }}><Image src={logo} alt="" className="w-[50px] h-[50px] cursor-pointer rounded-[10px]"></Image></motion.div></a>
                 </div>
                 <div className="flex justify-between gap-3 items-center">
+                <MotionLink delay={0.2} href="/test">Test</MotionLink>
                     <MotionLink delay={0.2} href="/clients">Clients</MotionLink>
                     <MotionLink delay={0.3} href="/projects">Projects / Work</MotionLink>
                     <MotionLink delay={0.4} href="/about">About / Info</MotionLink>
@@ -52,7 +53,7 @@ export default function Navbar() {
             </div>
 
             {/* Navbar for small screens */}
-            <div className="flex md:hidden w-[100vw] h-[100vh] text-[#1a1a1a] bg-white z-20 font-bricoGrotM text-secondary">
+            <div className="flex md:hidden w-[100vw] h-[100vh] text-[#1a1a1a] z-20 font-bricoGrotM text-secondary absolute">
                 <div className={`fixed top-0 left-0 z-40 flex flex-row justify-start items-center p-5 text-[10vw] w-1/2 font-bestFont duration-1000 ease-in-out ${isOpen ? 'text-secondary' : 'text-primary'}`}>
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}><Link href="/">lucas</Link></motion.div>
                 </div>
