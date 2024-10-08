@@ -8,9 +8,9 @@ module.exports = {
   ],
   theme: {
   	extend: {
-		gridTemplateColumns: {
-			"16": "repeat(16, minmax(0, 1fr))"
-		},
+  		gridTemplateColumns: {
+  			'16': 'repeat(16, minmax(0, 1fr))'
+  		},
   		backgroundColor: {
   			primary: '#1e1e1e',
   			secondary: '#ebebeb',
