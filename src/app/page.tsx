@@ -33,10 +33,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="w-full h-[100vh] overflow-hidden font-bricoGrotR">
+      <div className="w-full h-[100vh] overflow-hidden ">
         <NavnAnimation />
         <About />
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 5 }} className="absolute bottom-[30vh] left-[50vw] transform translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0 md:bottom-5 md:right-10 flex items-center justify-end">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 5 }} className="absolute bottom-[30vh] left-[50vw] transform translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0 md:bottom-5 md:right-10 flex items-center justify-end font">
           <motion.div
             initial={{ y: 0 }}
             animate={{ y: [0, -10, 0] }}
@@ -50,9 +50,9 @@ export default function Home() {
       </div>
       <ImageSection />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 4 }}>
-        <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw] font-bricoGrotR">
+        <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
-            <div className="flex gap-3 md:gap-5 font-clashDisM">
+            <div className="flex gap-3 md:gap-5">
               <div className="text-primary">Latest</div>
               <div className="text-thirdy">projects</div>
             </div>

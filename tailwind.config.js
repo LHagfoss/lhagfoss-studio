@@ -67,10 +67,6 @@ module.exports = {
   		},
   		fontFamily: {
   			bestFont: 'bestFont',
-  			clashDisM: 'clashDisplay-medium',
-  			bricoGrotSB: 'bricolageGrotesque-semibold',
-  			bricoGrotR: 'bricolageGrotesque-regular',
-  			bricoGrotEB: 'bricolageGrotesque-bold'
   		},
   		transitionProperty: {
   			background: 'background'
