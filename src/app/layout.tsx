@@ -14,10 +14,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LHagfoss - Home",
+  title: "lhagfoss - Home",
   description: "Developed by Lucas Hagfoss",
   openGraph: {
-    title: "LHagfoss | Home",
+    title: "lhagfoss",
     description: "Developed by Lucas Hagfoss",
     images: [
       {

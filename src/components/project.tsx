@@ -21,16 +21,16 @@ export default function Project({ imageSrc, title, content, logo }: ProjectProps
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, ease: easeInOut}}
-                className="aspect-square relative overflow-hidden bg-primary rounded-[5vw] md:rounded-[2vw] flex flex-col justify-end cursor-pointer shadow-2xl scaleMeHover font-bricoGrotR"
+                className="aspect-square relative overflow-hidden rounded-[2vw] flex flex-col justify-end cursor-pointer"
             >
-                <Image src={imageSrc} alt="" className="absolute inset-0 w-full h-full object-cover rounded-[1vw] bg-thirdy scaleMe duration-1000" />
-                <div className="flex justify-between items-center relative z-10 bg-primary rounded-[5vw] md:rounded-[2vw] p-5">
+                <Image src={imageSrc} alt="" className="w-full h-full object-cover rounded-[3vw] bg-thirdy" />
+                <div className="flex justify-between items-center relative z-10  rounded-lg p-3"> 
                     <div className="flex flex-col md:m-5">
                         <div className="text-secondary text-[4vw] md:text-[2vw]">{title}</div>
                         <div className="text-thirdy text-[3vw] md:text-[1vw]">{content}</div>
                     </div>
                     <div className="flex flex-col md:m-5">
-                        <Image src={logo} alt="" className="w-[15vw] h-[15vw] md:w-[5vw] md:h-[5vw] bg-primary rounded-[2vw] md:rounded-[1vw]" />
+                        <Image src={logo} alt="" className="w-[15vw] h-[15vw] md:w-[5vw] md:h-[5vw] rounded-lg" />
                     </div>
                 </div>
             </motion.div>

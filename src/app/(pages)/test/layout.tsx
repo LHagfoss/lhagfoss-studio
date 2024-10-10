@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LHagfoss - Test",
+  title: "lhagfoss - Test",
   description: "Developed by Lucas Hagfoss",
 };
 

@@ -3,7 +3,6 @@
 import React, { useEffect } from "react";
 import Lenis from "lenis";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import ImageSection from "@/components/imageSection";
 import NavnAnimation from "@/components/navn";
@@ -12,7 +11,6 @@ import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
 
-import arrowDownIcon from "@/assets/arrowdown.png"
 import projectImage1 from "@/assets/googleblablalba.jpg"
 import logoImage1 from "@/assets/nextjs.png"
 import projectImage2 from "@/assets/image.png"
@@ -36,27 +34,16 @@ export default function Home() {
       <div className="w-full h-[100vh] overflow-hidden ">
         <NavnAnimation />
         <About />
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 5 }} className="absolute bottom-[30vh] left-[50vw] transform translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0 md:bottom-5 md:right-10 flex items-center justify-end font">
-          <motion.div
-            initial={{ y: 0 }}
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 1, repeat: Infinity }}
-            className="flex items-center"
-            >
-              <div className="">Scroll down</div>
-              <Image src={arrowDownIcon} alt="" className="object-cover w-[60px]"></Image>
-            </motion.div> 
-          </motion.div>
       </div>
       <ImageSection />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 4 }}>
         <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
             <div className="flex gap-3 md:gap-5">
-              <div className="text-primary">Latest</div>
-              <div className="text-thirdy">projects</div>
+              <div className="text-thirdy">Latest</div>
+              <div className="text-primary">projects</div>
             </div>
-            <button type="button" className="text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-5 md:px-10 p-2 md:p-6 hover:bg-[#0000004d] transition-background duration-200">See all</button>
+            <button type="button" className="text-thirdy text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-5 md:px-10 p-2 md:p-6 hover:bg-[#0000004d] transition-background duration-200">See all</button>
           </div>
         </div>
       </motion.div>

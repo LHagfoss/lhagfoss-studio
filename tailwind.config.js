@@ -15,12 +15,18 @@ module.exports = {
   			primary: '#1e1e1e',
   			secondary: '#ebebeb',
   			thirdy: '#474747',
-  			fourth: '#111'
+  			fourth: '#0a0a0a'
   		},
   		lineHeight: {
   			'11': '0.7',
   			'12': '0.8'
   		},
+		textColor: {
+			primary: '#1e1e1e',
+			secondary: '#ebebeb',
+			thirdy: '#474747',
+			fourth: '#0a0a0a'
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -33,7 +39,7 @@ module.exports = {
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
   			thirdy: '#474747',
-  			fourth: '#111',
+  			fourth: '#0a0a0a',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -75,7 +81,7 @@ module.exports = {
   			primary: '#1e1e1e',
   			secondary: '#ebebeb',
   			thirdy: '#474747',
-  			fourth: '#111'
+  			fourth: '#0a0a0a'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
