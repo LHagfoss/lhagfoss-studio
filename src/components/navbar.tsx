@@ -5,7 +5,6 @@ import { motion, easeInOut } from "framer-motion"
 import Image from "next/image";
 import Link from "next/link";
 
-import darkLogo from "@/assets/dark-logo.png"
 import lightLogo from "@/assets/light-logo.png"
 import MotionLink from "@/components/motionlink";
 import copy from "@/assets/copy.svg"
@@ -59,7 +58,7 @@ export default function Navbar() {
                     <a href="/">
                         <motion.div initial={{ y: -150 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}>
                             <Image 
-                                src={isOpen ? lightLogo : darkLogo} 
+                                src={lightLogo} 
                                 alt="" 
                                 className="w-[200px] object-contain cursor-pointer h-[70px] mix-blend-difference" 
                             />

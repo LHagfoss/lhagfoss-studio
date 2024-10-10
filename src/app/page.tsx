@@ -10,6 +10,7 @@ import Navbar from "@/components/navbar";
 import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
+import Pluss from "@/components/pluss";
 
 import projectImage1 from "@/assets/googleblablalba.jpg"
 import logoImage1 from "@/assets/nextjs.png"
@@ -31,6 +32,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Pluss />
       <div className="w-full h-[100vh] overflow-hidden ">
         <NavnAnimation />
         <About />
