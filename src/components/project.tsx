@@ -21,9 +21,9 @@ export default function Project({ imageSrc, title, content, logo }: ProjectProps
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, ease: easeInOut}}
-                className="aspect-square relative overflow-hidden rounded-[2vw] flex flex-col justify-end cursor-pointer"
+                className="relative overflow-hidden rounded-[2vw] flex flex-col justify-between cursor-pointer"
             >
-                <Image src={imageSrc} alt="" className="w-full h-full object-cover rounded-[3vw] bg-thirdy" />
+                <Image src={imageSrc} alt="" className="w-full aspect-square object-cover rounded-[3vw] bg-thirdy" />
                 <div className="flex justify-between items-center relative z-10  rounded-lg p-3"> 
                     <div className="flex flex-col md:m-5">
                         <div className="text-secondary text-[4vw] md:text-[2vw]">{title}</div>

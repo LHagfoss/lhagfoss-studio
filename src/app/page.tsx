@@ -35,8 +35,8 @@ export default function Home() {
       <Pluss />
       <div className="w-full h-[100vh] overflow-hidden ">
         <NavnAnimation />
-        <About />
       </div>
+      <About />
       <ImageSection />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 4 }}>
         <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
-      <div className="w-full md:h-[100vw] p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
+      <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
         <Project imageSrc={projectImage2} title="Website / Project #1" content="some random text" logo={logoImage1} />
         <Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" logo={logoImage1} />
         <Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" logo={logoImage1} />

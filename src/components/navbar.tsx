@@ -70,7 +70,7 @@ export default function Navbar() {
                         <button 
                             type="button" 
                             onClick={toggleNavbar} 
-                            className={`toggle-button w-[70px] h-[70px] rounded-full cursor-pointer duration-1000 ease-in-out ${isOpen ? 'bg-secondary text-fourth' : 'text-secondary bg-fourth'} mix-blend-difference`}
+                            className={`toggle-button w-[70px] h-[70px] rounded-full cursor-pointer duration-1000 ease-in-out ${isOpen ? 'bg-secondary text-fourth border-none' : 'text-secondary bg-fourth border border-secondary'} mix-blend-difference`}
                         >
                             {isOpen ? 'Close' : 'Open'}
                         </button>
@@ -80,22 +80,15 @@ export default function Navbar() {
                     initial={{ x: -1000, opacity: 0 }}
                     animate={{ x: isOpen ? 0 : 1000, opacity: isOpen ? 1 : 0 }}
                     transition={{ duration: 1, ease: easeInOut }}
-                    className="z-20 w-full h-full top-0 left-0 bg-fourth fixed p-[5vw] py-[30vw] text-[#1a1a1a] justify-around items-start overflow-hidden tracking-wide leading-20 text-[10vw] flex flex-col"
+                    className="z-20 w-full h-full top-0 left-0 bg-fourth fixed p-[5vw] py-[30vw] text-[#1a1a1a] justify-around items-start overflow-hidden text-[8vw] flex flex-col"
                 >
-                    <div className="flex flex-1 gap-3 flex-col text-secondary">
+                    <div className="flex-1 flex flex-col justify-between text-secondary">
                         <Link href="/clients" className="">Clients</Link>
                         <Link href="/projects" className="">Projects / Work</Link>
                         <Link href="/about" className="">About / Info</Link>
                         <Link href="/other" className="">Other</Link>
                         <Link href="/github" className="">Github</Link>
                         <Link href="/contact" className="">Contact</Link>
-                        <div onClick={copyEmail} className="bg-secondary text-fourth p-3 px-6 rounded-full flex items-center gap-3 border text-[5vw]">
-                            <Image src={copy} alt=""></Image>
-                            <div className="">Copy my E-Mail</div>
-                        </div>
-                        {showPopup && (
-                            <div className="rounded-full text-secondary p-3 px-6 flex justify-center text-[4vw]">Copied email!</div>
-                        )}
                     </div>
                 </motion.div>
             </div>
