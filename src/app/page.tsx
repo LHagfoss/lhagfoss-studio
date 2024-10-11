@@ -48,10 +48,10 @@ export default function Home() {
         </div>
       </motion.div>
       <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
-        <Project imageSrc={projectImage2} title="Website / Project #1" content="some random text" iconText="Niga" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" iconText="Niga" logo={logoImage1} />
-        <Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" iconText="Niga" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" iconText="Niga" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="Website / Project #1" content="some random text" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
       </div>
       <div className="w-full h-full overflow-hidden">
         <Footer />

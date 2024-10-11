@@ -11,10 +11,11 @@ interface ProjectProps {
   title: string;
   content: string;
   logo: StaticImageData; 
-  iconText: string;
+  iconText1: string;
+  iconText2: string;
 }
 
-export default function Project({ imageSrc, title, content, logo, iconText }: ProjectProps) {
+export default function Project({ imageSrc, title, content, logo, iconText1, iconText2 }: ProjectProps) {
 
     return (
         <>
@@ -32,8 +33,8 @@ export default function Project({ imageSrc, title, content, logo, iconText }: Pr
                     </div>
                     <div className="flex items-center gap-3">
                         <div className="flex items-end flex-col">
-                            <div className="text-secondary text-[4vw] md:text-[1vw]">{title}</div>
-                            <div className="text-thirdy text-[3vw] md:text-[1vw]">{content}</div>
+                            <div className="text-secondary text-[4vw] md:text-[1vw]">{iconText1}</div>
+                            <div className="text-thirdy text-[3vw] md:text-[1vw]">{iconText2}</div>
                         </div>
                         <Image src={logo} alt="" className="w-[15vw] h-[15vw] md:w-[5vw] md:h-[5vw] rounded-lg" />
                     </div>
