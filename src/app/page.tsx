@@ -10,7 +10,6 @@ import Navbar from "@/components/navbar";
 import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
-import Pluss from "@/components/pluss";
 
 import projectImage1 from "@/assets/googleblablalba.jpg"
 import logoImage1 from "@/assets/nextjs.png"
@@ -32,7 +31,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Pluss />
       <div className="w-full h-[100vh] overflow-hidden ">
         <NavnAnimation />
       </div>
@@ -50,10 +48,10 @@ export default function Home() {
         </div>
       </motion.div>
       <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
-        <Project imageSrc={projectImage2} title="Website / Project #1" content="some random text" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" logo={logoImage1} />
-        <Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="Website / Project #1" content="some random text" iconText="Niga" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" iconText="" logo={logoImage1} />
+        <Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" iconText="" logo={logoImage1} />
+        <Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" iconText="" logo={logoImage1} />
       </div>
       <div className="w-full h-full overflow-hidden">
         <Footer />
@@ -61,4 +59,3 @@ export default function Home() {
     </>
   );
 }
-      
