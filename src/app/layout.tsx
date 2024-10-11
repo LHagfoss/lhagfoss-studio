@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     description: "Developed by Lucas Hagfoss",
     images: [
       {
-        url: "../../assets/thumbnail.jpg",
+        url: "../../assets/thumbnail.png",
         width: 800,
         height: 600,
-        alt: "Description of the image",
+        alt: "lhagfoss image",
       },
     ],
   },
