@@ -48,7 +48,7 @@ export default function Navbar() {
                     </motion.div>
                 </div>
                 {showPopup && (
-                    <div className="absolute top-[80px] mr-10 right-0 bg-thirdy rounded-full text-white p-2 px-5 flex justify-center text-[0.8vw]">Copied email</div>
+                    <div className="absolute top-[80px] mr-10 right-0 bg-thirdy rounded text-white p-2 px-5 flex justify-center text-[0.8vw]">Copied email</div>
                 )}
             </div>
 
