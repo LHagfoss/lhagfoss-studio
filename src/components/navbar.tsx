@@ -1,13 +1,13 @@
 "use client"
 
-import React, { useState } from "react";
-import { motion, easeInOut } from "framer-motion"
+import React, { useState, useEffect } from "react";
+import { motion, easeInOut } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import lightLogo from "@/assets/light-logo.png"
+import lightLogo from "@/assets/light-logo.png";
 import MotionLink from "@/components/motionlink";
-import copy from "@/assets/copy.svg"
+import copy from "@/assets/copy.svg";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function Navbar() {
             {/* Navbar for medium screens */}
             <div className="fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-10 font-bricoGrotM overflow-hidden navbar">
                 <div className="flex">
-                    <a href="/"><motion.div initial={{ y: -250 }} animate={{  y: 0 }} transition={{ duration: 1.5, delay: 0.1, ease: easeInOut }}><Image src={lightLogo} alt="" className="w-[200px] object-contain cursor-pointer "></Image></motion.div></a>
+                    {/* <a href="/"><motion.div initial={{ y: -250 }} animate={{  y: 0 }} transition={{ duration: 1.5, delay: 0.1, ease: easeInOut }}><Image src={lightLogo} alt="" className="w-[200px] object-contain cursor-pointer "></Image></motion.div></a> */}
                 </div>
                 <div className="flex justify-between gap-3 items-center">
                     <MotionLink delay={0.2} href="/test">Test</MotionLink>
@@ -55,7 +55,7 @@ export default function Navbar() {
             {/* Navbar for small screens */}
             <div className="flex md:hidden w-[100vw] h-[100vh] z-20 absolute">
                 <div className={`fixed top-0 left-0 z-40 flex flex-row justify-start items-center p-5 text-[10vw] w-1/2 font-bestFont duration-1000 ease-in-out ${isOpen ? 'text-secondary' : 'text-primary'}`}>
-                    <a href="/">
+                    {/* <a href="/">
                         <motion.div initial={{ y: -150 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}>
                             <Image 
                                 src={lightLogo} 
@@ -63,7 +63,7 @@ export default function Navbar() {
                                 className="w-[200px] object-contain cursor-pointer h-[70px] mix-blend-difference" 
                             />
                         </motion.div>
-                    </a>
+                    </a> */}
                 </div>
                 <div className="fixed top-0 right-0 z-30 w-full flex flex-row justify-end items-center p-5">
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}>
