@@ -1,11 +1,10 @@
 "use client"
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, easeInOut } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import lightLogo from "@/assets/light-logo.png";
 import MotionLink from "@/components/motionlink";
 import copy from "@/assets/copy.svg";
 
