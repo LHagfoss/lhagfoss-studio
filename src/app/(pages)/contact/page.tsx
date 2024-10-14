@@ -73,48 +73,48 @@ export default function Home() {
         <div className="w-full h-[full] flex flex-col md:flex-row">
           <div className="md:flex-1 flex flex-col leading-3 p-4 py-10 md:p-20 md:py-20">
             <div className="flex flex-col">
-              <div className="flex overflow-hidden pb-5">
+              <div className="flex overflow-hidden py-3">
                 {text1Part1.split(" ").map((word, index) => (
-                  <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2 + index * 0.1, ease: easeInOut }} className="p-2 text-fourth text-[8vw] md:text-[3vw]">{word}</motion.div>
+                  <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2 + index * 0.1, ease: easeInOut }} className="p-2 text-secondary text-[8vw] md:text-[3vw]">{word}</motion.div>
                 ))}
               </div>
-              <div className="flex overflow-hidden pb-5">
+              <div className="flex overflow-hidden py-7">
                 {text1Part2.split(" ").map((word, index) => (
-                  <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.5 + index * 0.1, ease: easeInOut }} className="p-2 text-fourth text-[8vw] md:text-[3vw]">{word}</motion.div>
+                  <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.5 + index * 0.1, ease: easeInOut }} className="p-2 text-secondary text-[8vw] md:text-[3vw]">{word}</motion.div>
                 ))}
               </div>
               <div className="flex flex-wrap flex-row md:w-[35vw] leading-7">
                 {text2Part1.split(" ").map((word, index) => (
-                  <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3 + index * 0.01, ease: easeInOut }} className="px-1 text-primary text-[5vw] md:text-[1vw]">{word}</motion.div>
+                  <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3 + index * 0.01, ease: easeInOut }} className="px-1 text-thirdy text-[5vw] md:text-[1vw]">{word}</motion.div>
                 ))}
               </div>
               <div className="flex flex-col mt-10">
                 <div className="flex flex-wrap flex-row leading-7">
                   {text2Part2.split(" ").map((word, index) => (
-                    <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.5 + index * 0.01, ease: easeInOut }} className="px-1 text-primary text-[5vw] md:text-[1vw]">{word}</motion.div>
+                    <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 3.5 + index * 0.01, ease: easeInOut }} className="px-1 text-thirdy text-[5vw] md:text-[1vw]">{word}</motion.div>
                   ))}
                 </div>
                 <div className="flex flex-wrap flex-row leading-7">
                   {text3.split(" ").map((word, index) => (
-                    <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 4 + index * 0.01, ease: easeInOut }} className="px-1 text-thirdy text-[5vw] md:text-[1vw]">{word}</motion.div>
+                    <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 4 + index * 0.01, ease: easeInOut }} className="px-1 text-secondary text-[5vw] md:text-[1vw]">{word}</motion.div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex-1 flex flex-col overflow-hidden p-4 md:p-20 md:py-20">
+          <div className="flex-1 flex flex-col overflow-hidden p-4 md:p-20 md:py-20 text-secondary">
             <form onSubmit={handleSubmit} className="flex flex-col gap-10 w-full mb-10 resize-none ">
               <div className="w-full ">
                 <div className="md:text-[1.3vw]">Name</div>
-                <input type="text" name="name" placeholder="Your Name..." value={formData.name} onChange={handleChange} className="flex bg-[#ebebeb] w-full outline-none pb-10 border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy  focus:placeholder:text-primary" required />
+                <input type="text" name="name" placeholder="Your Name..." value={formData.name} onChange={handleChange} className="flex bg-fourth w-full outline-none pb-10 border-b text-thirdy focus:text-secondary border-thirdy focus:border-secondary placeholder:text-thirdy  focus:placeholder:text-secondary" required />
               </div>
               <div className="w-full">
                 <div className="md:text-[1.3vw]">Email</div>
-                <input type="email" name="email" placeholder="Your Email..." value={formData.email} onChange={handleChange} className="bg-[#ebebeb] w-full outline-none pb-10 border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy focus:placeholder:text-primary" required />
+                <input type="email" name="email" placeholder="Your Email..." value={formData.email} onChange={handleChange} className="bg-fourth w-full outline-none pb-10 border-b text-thirdy focus:text-secondary border-thirdy focus:border-secondary placeholder:text-thirdy focus:placeholder:text-secondary" required />
               </div>
               <div className="w-full">
                 <div className="md:text-[1.3vw]">Message</div>
-                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-[#ebebeb] w-full min-h-[20vh] outline-none border-b text-thirdy focus:text-primary border-thirdy focus:border-primary placeholder:text-thirdy focus:placeholder:text-primary" required />
+                <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-fourth w-full min-h-[20vh] outline-none border-b text-thirdy focus:text-secondary border-thirdy focus:border-secondary placeholder:text-thirdy focus:placeholder:text-secondary" required />
               </div>
               <button type="submit" className="bg-primary text-white p-3 px-5 w-full md:w-1/4 rounded-full">Send Message</button>
             </form>
