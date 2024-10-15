@@ -30,7 +30,7 @@ export default function Home() {
     }, 2000);
 
     const handleScroll = () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 1) {
             setIsScrolled(true);
         } else {
             setIsScrolled(false);
@@ -55,8 +55,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ isScrolled ? "p-0" : "p-5 md:p-10" }`}>
-        <NavnAnimation />
+      <NavnAnimation />
+      <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ isScrolled ? "p-0" : "p-5 md:p-28" }`}>
         <div className={`w-full h-full bg-fourth duration-500 ${ isScrolled ? "rounded-none" : "rounded-[2vw]" }`}></div>
       </div>
       <About />
