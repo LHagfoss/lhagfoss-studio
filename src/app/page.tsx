@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Lenis from "lenis";
 import { motion } from "framer-motion";
 
@@ -17,6 +17,21 @@ import projectImage2 from "@/assets/image.png"
 
 export default function Home() {
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  useEffect(() => {
+      const handleScroll = () => {
+          if (window.scrollY > 50) {
+              setIsScrolled(true);
+          } else {
+              setIsScrolled(false);
+          }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   useEffect( () => {
     window.scrollTo(0, 0);
 
@@ -31,8 +46,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="w-full h-[100vh] overflow-hidden ">
+      <div className={`w-full h-[100vh] overflow-hidden bg-white duration-1000 ${ isScrolled ? "p-0" : "p-10" }`}>
         <NavnAnimation />
+        <div className={`w-full h-full bg-fourth duration-500 ${ isScrolled ? "rounded-none" : "rounded-[2vw]" }`}></div>
       </div>
       <About />
       <ImageSection />
