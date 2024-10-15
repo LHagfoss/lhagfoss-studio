@@ -20,16 +20,25 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   
   useEffect(() => {
-      const handleScroll = () => {
-          if (window.scrollY > 50) {
-              setIsScrolled(true);
-          } else {
-              setIsScrolled(false);
-          }
-      };
+    const firstScroll = () => {
+      setIsScrolled(true);
+    };
 
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
+    firstScroll()
+    setTimeout(() => {
+      setIsScrolled(false)
+    }, 2000);
+
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect( () => {
@@ -46,7 +55,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className={`w-full h-[100vh] overflow-hidden bg-white duration-1000 ${ isScrolled ? "p-0" : "p-10" }`}>
+      <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ isScrolled ? "p-0" : "p-5 md:p-10" }`}>
         <NavnAnimation />
         <div className={`w-full h-full bg-fourth duration-500 ${ isScrolled ? "rounded-none" : "rounded-[2vw]" }`}></div>
       </div>
