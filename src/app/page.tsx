@@ -17,7 +17,7 @@ import logoImage1 from "@/assets/nextjs.png"
 import projectImage2 from "@/assets/image.png"
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [, setIsScrolled] = useState(false);
   const [zoomIn, setZoomIn] = useState(false);
   
   useEffect(() => {
