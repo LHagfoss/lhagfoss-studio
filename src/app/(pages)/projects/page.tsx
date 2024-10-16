@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, easeInOut } from "framer-motion"
 
-import Navbar from "@/components/secondnavbar"
+import Navbar from "@/components/navbar"
 import SecondName from "@/components/secondnavn";
 import Footer from "@/components/footer";
 
