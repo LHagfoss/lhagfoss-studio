@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, easeInOut } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +9,6 @@ import MotionLink from "@/components/motionlink";
 import copy from "@/assets/copy.svg";
 
 export default function Navbar() {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
 
