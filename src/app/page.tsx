@@ -10,6 +10,7 @@ import Navbar from "@/components/navbar";
 import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
+import FadeIn from "@/components/fadein";
 
 import projectImage1 from "@/assets/googleblablalba.jpg"
 import logoImage1 from "@/assets/nextjs.png"
@@ -17,16 +18,12 @@ import projectImage2 from "@/assets/image.png"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [zoomIn, setZoomIn] = useState(false);
   
   useEffect(() => {
-    const firstScroll = () => {
-      setIsScrolled(true);
-    };
-
-    firstScroll()
     setTimeout(() => {
-      setIsScrolled(false)
-    }, 2000);
+      setZoomIn(true)
+    }, 1200);
 
     const handleScroll = () => {
         if (window.scrollY > 1) {
@@ -55,11 +52,13 @@ export default function Home() {
     <>
       <Navbar />
       <NavnAnimation />
-      <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ isScrolled ? "p-0" : "p-5 md:p-28" }`}>
-        <div className={`w-full h-full bg-fourth duration-500 ${ isScrolled ? "rounded-none" : "rounded-[2vw]" }`}></div>
+      <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vh]" }`}>
+        <div className={`w-full h-full bg-fourth duration-500 ${ zoomIn ? "rounded-none" : "rounded-[2vw]" }`}></div>
       </div>
       <About />
-      <ImageSection />
+      <FadeIn delay={0}>
+        <ImageSection />
+      </FadeIn>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 4 }}>
         <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
@@ -72,10 +71,10 @@ export default function Home() {
         </div>
       </motion.div>
       <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
-        <Project imageSrc={projectImage2} title="Website / Project #1" content="some random text" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
-        <Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
-        <Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" iconText1="Monday" iconText2="20.05.24" logo={logoImage1} />
+        <FadeIn delay={0.1}><Project imageSrc={projectImage2} title="Website / Project #1" content="This is my Github account, filled with all my codes from when I started til today!" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
+        <FadeIn delay={0.2}><Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
+        <FadeIn delay={0.3}><Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
+        <FadeIn delay={0.4}><Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
       </div>
       <div className="w-full h-full overflow-hidden">
         <Footer />

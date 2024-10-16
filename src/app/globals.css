@@ -42,6 +42,7 @@ body {
 
 .navbar { z-index: 999; }
 .over { z-index: 9991; }
+.onTop { z-index: 9999;}
 
 .hoverMe::after {
   content: '';

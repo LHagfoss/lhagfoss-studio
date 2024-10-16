@@ -6,7 +6,7 @@ import Lenis from "lenis"
 import { motion, easeInOut } from "framer-motion"
 import Image from "next/image"
 
-import Navbar from "@/components/secondnavbar"
+import Navbar from "@/components/navbar"
 import SecondName from "@/components/secondnavn";
 import Footer from "@/components/footer"
 
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="w-full h-[full] flex flex-col md:flex-row">
           <div className="md:flex-1 flex flex-col leading-[0px] p-4 py-10 md:p-20 md:py-20">
             <div className="flex flex-col">
-              <div className="flex overflow-hidden py-3">
+              <div className="flex overflow-hidden py-5">
                 {text1Part1.split(" ").map((word, index) => (
                   <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2 + index * 0.1, ease: easeInOut }} className="p-2 text-secondary text-[8vw] md:text-[3vw]">{word}</motion.div>
                 ))}
