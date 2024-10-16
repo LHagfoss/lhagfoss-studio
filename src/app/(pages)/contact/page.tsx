@@ -6,7 +6,8 @@ import Lenis from "lenis"
 import { motion, easeInOut } from "framer-motion"
 import Image from "next/image"
 
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/secondnavbar"
+import SecondName from "@/components/secondnavn";
 import Footer from "@/components/footer"
 
 import instagramIcon from "@/assets/instagram.png"
@@ -14,6 +15,7 @@ import youtubeIcon from "@/assets/youtube.png"
 import twitterIcon from "@/assets/twitter.png"
 
 export default function Home() {
+  const [messageVisible, setMessageVisible] = useState(false);
   const [time, setTime] = useState(getFormattedTime());
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,6 +40,8 @@ export default function Home() {
     .then((response) => {
       console.log("Email sent successfully!", response.status, response.text);
       setFormData({ name: "", email: "", message: "" });
+      setMessageVisible(true);
+      setTimeout(() => setMessageVisible(false), 2000);
     })
     .catch((error) => {
       console.error('Failed to send email:', error);
@@ -67,18 +71,19 @@ export default function Home() {
   const text3 = "- Lucas Hagfoss"
 
   return (
-    <>
+    <>  
       <Navbar />
+      <SecondName />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2, duration: 1, ease: easeInOut }} className="mt-[100px] w-[100vw] h-[150vh] md:h-[100vh] flex justify-center items-center">
         <div className="w-full h-[full] flex flex-col md:flex-row">
-          <div className="md:flex-1 flex flex-col leading-3 p-4 py-10 md:p-20 md:py-20">
+          <div className="md:flex-1 flex flex-col leading-[0px] p-4 py-10 md:p-20 md:py-20">
             <div className="flex flex-col">
               <div className="flex overflow-hidden py-3">
                 {text1Part1.split(" ").map((word, index) => (
                   <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2 + index * 0.1, ease: easeInOut }} className="p-2 text-secondary text-[8vw] md:text-[3vw]">{word}</motion.div>
                 ))}
               </div>
-              <div className="flex overflow-hidden py-7">
+              <div className="flex overflow-hidden py-5">
                 {text1Part2.split(" ").map((word, index) => (
                   <motion.div key={index} initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 2.5 + index * 0.1, ease: easeInOut }} className="p-2 text-secondary text-[8vw] md:text-[3vw]">{word}</motion.div>
                 ))}
@@ -117,6 +122,9 @@ export default function Home() {
                 <textarea name="message" placeholder="Your Message..." value={formData.message} onChange={handleChange} className="bg-fourth w-full min-h-[20vh] outline-none border-b text-thirdy focus:text-secondary border-thirdy focus:border-secondary placeholder:text-thirdy focus:placeholder:text-secondary" required />
               </div>
               <button type="submit" className="bg-primary text-white p-3 px-5 w-full md:w-1/4 rounded-full">Send Message</button>
+              {messageVisible && (
+                <div className="absolute text-secondary bg-thirdy p-3 px-4 rounded bottom-10 right-10">Message has been sent successfully!</div>
+              )}
             </form>
 
             <div className="w-full flex flex-col md:flex-col gap-10">

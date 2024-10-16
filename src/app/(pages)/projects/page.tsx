@@ -3,13 +3,15 @@
 import React from "react";
 import { motion, easeInOut } from "framer-motion"
 
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/secondnavbar"
+import SecondName from "@/components/secondnavn";
 import Footer from "@/components/footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <SecondName />
       <div className="w-full h-full overflow-hidden flex justify-center items-center">
 
       </div>

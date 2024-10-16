@@ -21,12 +21,12 @@ module.exports = {
   			'11': '0.7',
   			'12': '0.8'
   		},
-		textColor: {
-			primary: '#1e1e1e',
-			secondary: '#ebebeb',
-			thirdy: '#676767',
-			fourth: '#0a0a0a'
-		},
+  		textColor: {
+  			primary: '#1e1e1e',
+  			secondary: '#ebebeb',
+  			thirdy: '#676767',
+  			fourth: '#0a0a0a'
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -72,7 +72,7 @@ module.exports = {
   			}
   		},
   		fontFamily: {
-  			bestFont: 'bestFont',
+  			bestFont: 'bestFont'
   		},
   		transitionProperty: {
   			background: 'background'

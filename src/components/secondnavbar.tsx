@@ -13,19 +13,6 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 1) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     };
@@ -39,11 +26,11 @@ export default function Navbar() {
     return (
         <div className="navbar-container">
             {/* Navbar for medium screens */}
-            <div className="over fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-10 font-bricoGrotM overflow-hidden navbar">
+            <div className="over fixed top-0 hidden md:flex w-full text-secondary justify-between items-center p-10 font-bricoGrotM overflow-hidden navbar">
                 <div className="flex">
                     {/* <a href="/"><motion.div initial={{ y: -250 }} animate={{  y: 0 }} transition={{ duration: 1.5, delay: 0.1, ease: easeInOut }}><Image src={lightLogo} alt="" className="w-[200px] object-contain cursor-pointer "></Image></motion.div></a> */}
                 </div>
-                <div className={`flex justify-between gap-3 items-center ${isScrolled ? 'text-secondary' : 'text-fourth'}`}>
+                <div className={`flex justify-between gap-3 items-center text-secondary `}>
                     <MotionLink delay={0.2} href="/test">Test</MotionLink>
                     <MotionLink delay={0.2} href="/clients">Clients</MotionLink>
                     <MotionLink delay={0.3} href="/projects">Projects / Work</MotionLink>
@@ -61,7 +48,7 @@ export default function Navbar() {
                     </motion.div>
                 </div>
                 {showPopup && (
-                    <div className="absolute top-[80px] mr-10 right-0 bg-thirdy rounded text-white p-2 px-5 flex justify-center text-[0.8vw]">Copied email</div>
+                    <div className="absolute top-[80px] mr-10 right-0 bg-thirdy rounded text-secondary p-2 px-5 flex justify-center text-[0.8vw]">Copied email</div>
                 )}
             </div>
 
