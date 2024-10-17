@@ -23,7 +23,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setZoomIn(true)
-    }, 1200);
+    }, 700);
 
     const handleScroll = () => {
         if (window.scrollY > 1) {
@@ -52,8 +52,8 @@ export default function Home() {
     <>
       <Navbar />
       <NavnAnimation />
-      <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vh]" }`}>
-        <div className={`w-full h-full bg-fourth duration-500 ${ zoomIn ? "rounded-none" : "rounded-[2vw]" }`}></div>
+      <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vw]" }`}>
+        <div className={`w-full h-full bg-fourth duration-1500 ${ zoomIn ? "rounded-none" : "rounded-full" }`}></div>
       </div>
       <About />
       <FadeIn delay={0}>
