@@ -1,10 +1,10 @@
 {
-  "name": "zanyo",
+  "name": "lhagfoss-studio",
   "version": "0.61.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
