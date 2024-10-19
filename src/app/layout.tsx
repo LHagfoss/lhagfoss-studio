@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { GoogleAnalytics } from 'nextjs-google-analytics';
@@ -14,22 +13,20 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "lhagfoss - Home",
   description: "Developed by Lucas Hagfoss",
-  openGraph: {
-    title: "lhagfoss",
-    description: "Developed by Lucas Hagfoss",
-    images: [
-      {
-        url: "../../assets/thumbnail.png",
-        width: 800,
-        height: 600,
-        alt: "lhagfoss image",
-      },
-    ],
+  metadataBase: new URL('https://acme.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
   },
-};
+  openGraph: {
+    images: '../../assets/thumbnail.png',
+  },
+}
 
 export default function RootLayout({
   children,
