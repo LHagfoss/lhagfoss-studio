@@ -7,7 +7,7 @@ export default function About() {
     const text3 = "Balls Balls";
 
     return (
-        <FadeIn>
+        <FadeIn delay={0}>
             <div className="relative bottom-0 w-full md:w-[100vw] flex flex-col gap-3 items-start p-10 md:text-[1.5vw] leading-3 md:leading-6 text-[5vw]">
                 <div className="w-full text-thirdy flex flex-row gap-1 overflow-hidden text-[3vw] leading-12">
                     <div className="flex flex-wrap gap-1">I&apos;m </div><div className="text-secondary">Lucas Hagfoss</div><div className="flex flex-wrap gap-1">, a user interface & user experience designer from Norway, focusing on building functional websites that will increase conversion and help reach customers.</div>
