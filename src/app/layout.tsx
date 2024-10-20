@@ -15,13 +15,6 @@ const geistMono = localFont({
 export const metadata = {
   title: "lhagfoss - Home",
   description: "Developed by Lucas Hagfoss",
-  metadataBase: new URL('https://acme.com'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-    },
-  },
   openGraph: {
     images: '../../assets/thumbnail.png',
   },
