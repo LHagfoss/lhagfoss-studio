@@ -16,9 +16,16 @@ export const metadata = {
   title: "lhagfoss - Home",
   description: "Developed by Lucas Hagfoss",
   openGraph: {
-    images: '../../assets/thumbnail.png',
+    images: [
+      {
+        url: '/thumbnail.png',
+        width: 800,
+        height: 600,
+        alt: 'Thumbnail',
+      },
+    ],
   },
-}
+};
 
 export default function RootLayout({
   children,
