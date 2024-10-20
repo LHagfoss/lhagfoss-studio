@@ -19,10 +19,10 @@ export default function Project({ imageSrc, title, content, logo, month, day, ye
 
     return (
         <>
-            <div className="relative flex flex-col justify-between cursor-pointer border">
+            <div className="relative flex flex-col justify-between cursor-pointer h-full">
                 <Image src={imageSrc} alt="" className="w-full aspect-square object-cover rounded-[3vw] bg-thirdy" />
-                <div className="flex justify-between items-center relative z-10 rounded-l py-10"> 
-                    <div className="flex flex-col ">
+                <div className="flex justify-between items-center relative z-10 rounded-l py-5"> 
+                    <div className="flex flex-col w-2/3 gap-3">
                         <div className="text-secondary text-[4vw] md:text-[2vw]">{title}</div>
                         <div className="text-thirdy text-[3vw] md:text-[1vw]">{content}</div>
                     </div>
@@ -37,6 +37,7 @@ export default function Project({ imageSrc, title, content, logo, month, day, ye
                         <Image src={logo} alt="" className="w-[15vw] h-[15vw] md:w-[5vw] md:h-[5vw] rounded-lg" />
                     </div>
                 </div>
+                <button type="button" className="p-5 md:p-1 px-5 border-thirdy hover:border-secondary border rounded-full text-thirdy hover:text-secondary text-[4vw] md:text-[1vw]">Learn more</button>
             </div>
         </>
     );

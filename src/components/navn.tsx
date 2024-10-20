@@ -26,7 +26,7 @@ export default function NavnAnimation() {
 
     return (
         <>
-            <div className={`navbar fixed justify-center items-center duration-1000 select-none ${isScrolled ? 'z-20 onTop w-[40vw] md:w-[11vw] h-[5vh] m-5 md:m-10 p-0' : ' z-0 w-[100vw] h-[100vh] p-5 md:p-10 m-0'} `}>
+            <div className={`navbar fixed justify-center items-center duration-1000 select-none ${isScrolled ? 'z-20 onTop top-[0] translate-y-[0] w-[40vw] md:w-[11vw] h-[5vh] m-5 md:m-10 p-0' : ' z-0 w-[100vw] top-[50%] translate-y-[-50%] h-[50vh] p-5 md:p-10 m-0'} `}>
                 <div className="flex w-full h-full justify-center items-center">
                     <div className={`font-bestFont text-secondary flex justify-center items-center ${isScrolled ? 'text-[10vw] md:text-[3vw] h-[10vw] md:h-[3vw] cursor-pointer' : 'text-[20vw] h-[30vw]'} overflow-hidden duration-1000 cursor-default drop-shadow-lg`}>
                         <motion.div initial={{ y: 800 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: easeInOut }} onClick={home}>L</motion.div>

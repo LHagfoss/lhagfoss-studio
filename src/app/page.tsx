@@ -70,11 +70,10 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
-      <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 md:gap-10">
+      <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-5 md:gap-10 border">
         <FadeIn delay={0.1}><Project imageSrc={projectImage2} title="Website / Project #1" content="This is my Github account, filled with all my codes from when I started til today!" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
         <FadeIn delay={0.2}><Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
         <FadeIn delay={0.3}><Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
-        <FadeIn delay={0.4}><Project imageSrc={projectImage1} title="Website / Project #4" content="last random words" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
       </div>
       <div className="w-full h-full overflow-hidden">
         <Footer />

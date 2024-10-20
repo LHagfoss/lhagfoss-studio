@@ -7,6 +7,8 @@ import Link from "next/link";
 
 import MotionLink from "@/components/motionlink";
 import copy from "@/assets/copy.svg";
+import close from "@/assets/close.svg"
+import menu from "@/assets/menu.svg"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -74,9 +76,15 @@ export default function Navbar() {
                         <button 
                             type="button" 
                             onClick={toggleNavbar} 
-                            className={`toggle-button w-[70px] h-[70px] rounded-full cursor-pointer duration-1000 ease-in-out ${isOpen ? 'bg-secondary text-fourth border-none' : 'text-secondary bg-fourth border border-secondary'} mix-blend-difference`}
+                            className="toggle-button w-[70px] h-[70px] rounded-full cursor-pointer duration-1000 ease-in-out"
                         >
-                            {isOpen ? 'Close' : 'Open'}
+                            <motion.div 
+                                initial={{ scale: 0.95 }} 
+                                animate={{ scale: 1 }} 
+                                transition={{ duration: 0.5, ease: easeInOut }}
+                            >
+                                {isOpen ? <Image src={close} alt="Close" className="w-full h-full" /> : <Image src={menu} alt="Open" className="w-full h-full" />}
+                            </motion.div>
                         </button>
                     </motion.div>
                 </div>
