@@ -13,7 +13,6 @@ import Project from "@/components/project";
 import FadeIn from "@/components/fadein";
 
 import projectImage1 from "@/assets/googleblablalba.jpg"
-import logoImage1 from "@/assets/nextjs.png"
 import projectImage2 from "@/assets/image.png"
 
 export default function Home() {
@@ -55,7 +54,9 @@ export default function Home() {
       <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vw]" }`}>
         <div className={`w-full h-full bg-fourth duration-1500 ${ zoomIn ? "rounded-none" : "rounded-full" }`}></div>
       </div>
-      <About />
+      <FadeIn delay={0}>
+        <About />
+      </FadeIn>
       <FadeIn delay={0}>
         <ImageSection />
       </FadeIn>
@@ -70,14 +71,14 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
-      <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-5 md:gap-10 border">
-        <FadeIn delay={0.1}><Project imageSrc={projectImage2} title="Website / Project #1" content="This is my Github account, filled with all my codes from when I started til today!" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
-        <FadeIn delay={0.2}><Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
-        <FadeIn delay={0.3}><Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" month="April" day="Monday" year="2024" logo={logoImage1} /></FadeIn>
+      <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-5 md:gap-10">
+        <FadeIn delay={0.1}><Project imageSrc={projectImage2} title="Website / Project #1" content="This is my Github account, filled with all my codes from when I started til today!" month="April" year="2024"/></FadeIn>
+        <FadeIn delay={0.2}><Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" month="April" year="2024"/></FadeIn>
+        <FadeIn delay={0.3}><Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" month="April" year="2024"/></FadeIn>
       </div>
-      <div className="w-full h-full overflow-hidden">
+      <FadeIn className="w-full h-full overflow-hidden">
         <Footer />
-      </div>
+      </FadeIn>
     </>
   );
 }

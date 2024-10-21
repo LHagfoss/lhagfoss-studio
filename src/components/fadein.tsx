@@ -2,7 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, easeInOut } from 'framer-motion';
 
-export default function FadeIn({ children, delay = 1 }: { children: React.ReactNode; threshold?: number; delay?: number }) {
+export default function FadeIn({ children, delay = 1 }: { children: React.ReactNode; threshold?: number; delay?: number; className?: string }) {
     const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -20,6 +20,7 @@ export default function FadeIn({ children, delay = 1 }: { children: React.ReactN
       animate={inView ? 'visible' : 'hidden'}
       transition={{ delay: delay, duration: 1, ease: easeInOut }}
       variants={variants}
+      className=''
     >
       {children}
     </motion.div>
