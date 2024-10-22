@@ -15,7 +15,8 @@ module.exports = {
   			primary: '#1e1e1e',
   			secondary: '#ebebeb',
   			thirdy: '#676767',
-  			fourth: '#0a0a0a'
+  			fourth: '#0a0a0a',
+			fifth: "#979797",
   		},
   		lineHeight: {
   			'11': '0.7',
@@ -25,7 +26,8 @@ module.exports = {
   			primary: '#1e1e1e',
   			secondary: '#ebebeb',
   			thirdy: '#676767',
-  			fourth: '#0a0a0a'
+  			fourth: '#0a0a0a',
+			fifth: "#979797",
   		},
   		colors: {
   			background: 'hsl(var(--background))',
@@ -40,6 +42,7 @@ module.exports = {
   			},
   			thirdy: '#676767',
   			fourth: '#0a0a0a',
+			fifth: "#979797",
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -81,7 +84,8 @@ module.exports = {
   			primary: '#1e1e1e',
   			secondary: '#ebebeb',
   			thirdy: '#676767',
-  			fourth: '#0a0a0a'
+  			fourth: '#0a0a0a',
+			fifth: "#979797",
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

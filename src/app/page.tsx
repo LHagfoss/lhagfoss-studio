@@ -18,6 +18,17 @@ import projectImage2 from "@/assets/image.png"
 export default function Home() {
   const [, setIsScrolled] = useState(false);
   const [zoomIn, setZoomIn] = useState(false);
+
+  useEffect( () => {
+    window.scrollTo(0, 0);
+
+    const lenis = new Lenis()
+    const raf = (time: number) => {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [])
   
   useEffect(() => {
     setTimeout(() => {
@@ -35,17 +46,6 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect( () => {
-    window.scrollTo(0, 0);
-
-    const lenis = new Lenis()
-    const raf = (time: number) => {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-  }, [])
 
   return (
     <>
