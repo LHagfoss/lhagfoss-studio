@@ -11,6 +11,7 @@ import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
 import FadeIn from "@/components/fadein";
+import WorkInProgress from "@/components/workinprogress";
 
 import projectImage1 from "@/assets/googleblablalba.jpg"
 import projectImage2 from "@/assets/image.png"
@@ -18,6 +19,7 @@ import projectImage2 from "@/assets/image.png"
 export default function Home() {
   const [, setIsScrolled] = useState(false);
   const [zoomIn, setZoomIn] = useState(false);
+  const [workInProgress, setWorkInProgress] = useState(false)
 
   useEffect( () => {
     window.scrollTo(0, 0);
@@ -49,6 +51,7 @@ export default function Home() {
 
   return (
     <>
+      <WorkInProgress />
       <Navbar />
       <NavnAnimation />
       <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vw]" }`}>
