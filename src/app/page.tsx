@@ -22,17 +22,17 @@ export default function Home() {
   useEffect( () => {
     window.scrollTo(0, 0);
 
-    const lenis = new Lenis()
+    const lenis = new Lenis();
     const raf = (time: number) => {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf)
-  }, [])
+    requestAnimationFrame(raf);
+  }, []);
   
   useEffect(() => {
     setTimeout(() => {
-      setZoomIn(true)
+      setZoomIn(true);
     }, 700);
 
     const handleScroll = () => {
@@ -40,7 +40,7 @@ export default function Home() {
             setIsScrolled(true);
         } else {
             setIsScrolled(false);
-        }
+        };
     };
 
     window.addEventListener("scroll", handleScroll);

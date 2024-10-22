@@ -95,19 +95,19 @@ export default function About() {
                         >
                             {number}
                         </motion.div>
-                        <div className="w-full absolute bottom-0 flex justify-between gap-3">
+                        <div className="w-full absolute bottom-0 flex justify-between">
                             <button 
                                 type="button" 
-                                className={`min-w-[100px] p-1 px-5 rounded-full bg-fifth text-fourth font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                                className={`p-1 px-5 rounded-full border border-secondary text-secondary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                                 onClick={handleClickReset} 
                                 disabled={isAnimating}
                             >
                                 Reset
                             </button>
-                            <div className="flex gap-1">
+                            <div className="flex gap-2">
                                 <button 
                                     type="button" 
-                                    className={`min-w-[100px] p-1 px-5 rounded-full bg-fifth text-fourth font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                                    className={`p-1 px-7 rounded-full border border-[#ff0000] text-[#ff0000] hover:bg-[#ff0000] hover:text-secondary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                                     onClick={handleClickRemove} 
                                     disabled={isAnimating || number === 0}
                                 >
@@ -115,7 +115,7 @@ export default function About() {
                                 </button>
                                 <button 
                                     type="button" 
-                                    className={` min-w-[100px] p-1 px-5 rounded-full bg-fifth text-fourth font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                                    className={`p-1 px-7 rounded-full border border-[#00ff22] text-[#00ff22] hover:bg-[#00ff22] hover:text-secondary hover font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                                     onClick={handleClickAdd} 
                                     disabled={isAnimating}
                                 >
