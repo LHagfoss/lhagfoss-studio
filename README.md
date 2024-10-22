@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project created using latest version of Bun, CMD `bun create next-app` [``](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project created using latest version of Bun, CMD [`bun create next-app`](https://bun.sh/guides/ecosystem/nextjs).
 
 ## This is my portfolio
 
