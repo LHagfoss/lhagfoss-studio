@@ -75,7 +75,8 @@ module.exports = {
   			}
   		},
   		fontFamily: {
-  			bestFont: 'bestFont'
+  			bestFont: 'bestFont',
+			digitalFont: "digitalFont"
   		},
   		transitionProperty: {
   			background: 'background'

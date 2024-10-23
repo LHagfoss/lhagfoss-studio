@@ -16,6 +16,12 @@ body {
 }
 
 @font-face {
+  font-family: "digitalFont";
+  src: url(./fonts/digital-7.ttf);
+}
+
+
+@font-face {
   font-family: "bestFont";
   src: url(./fonts/Blanquotey.ttf);
 }
