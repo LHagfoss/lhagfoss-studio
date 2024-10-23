@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
+import { gsap } from "gsap"
 import Lenis from "lenis";
-import { motion } from "framer-motion";
 
 import ImageSection from "@/components/imageSection";
 import NavnAnimation from "@/components/navn";
@@ -11,7 +11,6 @@ import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
 import FadeIn from "@/components/fadein";
-import WorkInProgress from "@/components/workinprogress";
 
 import projectImage1 from "@/assets/googleblablalba.jpg"
 import projectImage2 from "@/assets/image.png"
@@ -19,14 +18,14 @@ import projectImage2 from "@/assets/image.png"
 export default function Home() {
   const [, setIsScrolled] = useState(false);
   const [zoomIn, setZoomIn] = useState(false);
-  const [workInProgress, setWorkInProgress] = useState(false)
+  const [workInProgress, setWorkInProgress] = useState(true)
 
   useEffect( () => {
     window.scrollTo(0, 0);
 
     const lenis = new Lenis();
     const raf = (time: number) => {
-      lenis.raf(time);
+      lenis.raf(time * 1000);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
@@ -49,9 +48,12 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleWorkInProgressClick = () => {
+    setWorkInProgress(false)
+  };
+
   return (
     <>
-      <WorkInProgress />
       <Navbar />
       <NavnAnimation />
       <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vw]" }`}>
@@ -63,7 +65,7 @@ export default function Home() {
       <FadeIn delay={0}>
         <ImageSection />
       </FadeIn>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} transition={{ delay: 4 }}>
+      <FadeIn delay={0}>
         <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
             <div className="flex gap-3 md:gap-5">
@@ -73,7 +75,7 @@ export default function Home() {
             <button type="button" className="text-thirdy text-[4vw] md:text-[1vw] border-2 border-primary rounded-full px-5 md:px-10 p-2 md:p-6 hover:bg-[#0000004d] transition-background duration-200">See all</button>
           </div>
         </div>
-      </motion.div>
+      </FadeIn>
       <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-5 md:gap-10">
         <FadeIn delay={0.1}><Project imageSrc={projectImage2} title="Website / Project #1" content="This is my Github account, filled with all my codes from when I started til today!" month="April" year="2024"/></FadeIn>
         <FadeIn delay={0.2}><Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" month="April" year="2024"/></FadeIn>

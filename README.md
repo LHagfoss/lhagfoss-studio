@@ -6,8 +6,8 @@ Made in Next.js
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 
 All libraries used/installed using CMD `bun i/install`
-- Framer-Motion
-- Lenis (Smooth Scroll)
+- [Framer-Motion](https://www.framer.com/motion/)
+- [Lenis (Smooth Scroll)](https://lenis.darkroom.engineering/)
 - GSAP (Not in use ATM)
 
 Deployed on Vercel
