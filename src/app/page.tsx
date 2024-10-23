@@ -8,7 +8,6 @@ import NavnAnimation from "@/components/navn";
 import Navbar from "@/components/navbar";
 import About from "@/components/about";
 import Footer from "@/components/footer";
-import Project from "@/components/project";
 import FadeIn from "@/components/fadein";
 import Slider from "@/components/slider";
 

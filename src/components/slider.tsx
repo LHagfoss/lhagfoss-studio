@@ -33,7 +33,7 @@ export default function Slider() {
         <FadeIn delay={0}>
             <div className="w-full p-5 md:p-10">
                 <div className="grid grid-cols-3 grid-rows-1 overflow-hidden gap-5 md:gap-10">
-                    {projects.slice(index, index + 3).map((project, i) => (
+                    {projects.slice(index, index + 3).map((project) => (
                         <div key={project.title}>
                             <Project
                                 imageSrc={project.imageSrc}
