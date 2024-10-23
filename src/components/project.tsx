@@ -25,8 +25,8 @@ export default function Project({ imageSrc, title, content, month, year }: Proje
                     <div className="flex flex-col gap-3 w-full h-[200px]">
                         <div className="text-secondary text-[6vw] md:text-[2vw]">{title}</div>
                         <div className="flex gap-1">
-                            <div className="text-primary text-[4vw] md:text-[1vw]">{month}</div>
-                            <div className="text-primary text-[4vw] md:text-[1vw]">{year}</div>
+                            <div className="text-fifth text-[4vw] md:text-[1vw]">{month}</div>
+                            <div className="text-fifth text-[4vw] md:text-[1vw]">{year}</div>
                         </div>
                         <div className="w-full flex justify-between">
                             <div className="text-thirdy text-[3vw] md:text-[1vw] w-4/5">{content}</div>

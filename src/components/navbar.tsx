@@ -32,7 +32,7 @@ export default function Navbar() {
     return (
         <div className="navbar-container">
             {/* Navbar for medium screens */}
-            <div className="over fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-10 font-bricoGrotM overflow-hidden navbar">
+            <div className="over fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-10 overflow-hidden navbar">
                 <div className="flex">
                     {/* <a href="/"><motion.div initial={{ y: -250 }} animate={{  y: 0 }} transition={{ duration: 1.5, delay: 0.1, ease: easeInOut }}><Image src={lightLogo} alt="" className="w-[200px] object-contain cursor-pointer "></Image></motion.div></a> */}
                 </div>

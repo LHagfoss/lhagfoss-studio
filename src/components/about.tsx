@@ -59,7 +59,7 @@ export default function About() {
     const text3 = "With a passion for creating user-friendly and visually appealing interfaces, I strive to deliver exceptional digital experiences that meet and exceed client expectations.";
 
     return (
-        <div className="w-[100vw] relative bottom-0 flex flex-col gap-5 items-start p-5 md:p-10 md:text-[1.5vw] text-[5vw]">
+        <div className="w-[100vw] relative bottom-0 flex flex-col gap-10 items-start p-5 md:p-10 md:text-[1.5vw] text-[5vw]">
             <div className="w-full h-[60vh] md:h-[27vw] text-thirdy text-[3vw] leading-5 md:leading-8 text1-container flex flex-col md:flex-row justify-between overflow-hidden p-10 gap-10 bg-primary rounded-[3vw]">
                 <div className="w-full h-full flex flex-col justify-between">
                     <div className="min-h-0 flex flex-wrap leading-8 md:leading-none">
@@ -84,7 +84,6 @@ export default function About() {
                 </div>
                 <div className="aspect-square h-full bg-thirdy rounded-3xl p-5 md:p-10 shadow flex">
                 <div className="w-full h-full">
-                    </div>
                     <div className="aspect-square h-full  flex flex-col justify-center items-center relative">
                         <motion.div 
                             id="number" 
@@ -123,11 +122,11 @@ export default function About() {
                                 </button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-            <div className="w-full h-[60vh] md:h-[27vw] flex flex-col md:flex-row gap-5 leading-5 md:leading-8">
+            </div>
+            <div className="w-full h-[60vh] md:h-[27vw] flex flex-col md:flex-row gap-10 leading-5 md:leading-8">
                 <div className="w-full h-full md:w-1/2 flex flex-col justify-between p-10 bg-primary rounded-[3vw] gap-10">
                     <div className="w-full min-h-0 flex flex-wrap">
                         { isVisible && (

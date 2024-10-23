@@ -25,4 +25,4 @@ export default function FadeIn({ children, delay = 1 }: { children: React.ReactN
       {children}
     </motion.div>
   );
-}
+};

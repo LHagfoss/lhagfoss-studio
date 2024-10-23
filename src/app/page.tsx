@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
-import { gsap } from "gsap"
 import Lenis from "lenis";
 
 import ImageSection from "@/components/imageSection";
@@ -11,21 +10,18 @@ import About from "@/components/about";
 import Footer from "@/components/footer";
 import Project from "@/components/project";
 import FadeIn from "@/components/fadein";
-
-import projectImage1 from "@/assets/googleblablalba.jpg"
-import projectImage2 from "@/assets/image.png"
+import Slider from "@/components/slider";
 
 export default function Home() {
   const [, setIsScrolled] = useState(false);
   const [zoomIn, setZoomIn] = useState(false);
-  const [workInProgress, setWorkInProgress] = useState(true)
 
   useEffect( () => {
     window.scrollTo(0, 0);
 
     const lenis = new Lenis();
     const raf = (time: number) => {
-      lenis.raf(time * 1000);
+      lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
@@ -47,10 +43,6 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleWorkInProgressClick = () => {
-    setWorkInProgress(false)
-  };
 
   return (
     <>
@@ -76,11 +68,7 @@ export default function Home() {
           </div>
         </div>
       </FadeIn>
-      <div className="w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-5 md:gap-10">
-        <FadeIn delay={0.1}><Project imageSrc={projectImage2} title="Website / Project #1" content="This is my Github account, filled with all my codes from when I started til today!" month="April" year="2024"/></FadeIn>
-        <FadeIn delay={0.2}><Project imageSrc={projectImage1} title="Website / Project #2" content="more random words" month="April" year="2024"/></FadeIn>
-        <FadeIn delay={0.3}><Project imageSrc={projectImage2} title="Website / Project #3" content="even more text" month="April" year="2024"/></FadeIn>
-      </div>
+      <Slider />
       <FadeIn className="w-full h-full overflow-hidden">
         <Footer />
       </FadeIn>
