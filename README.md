@@ -8,9 +8,10 @@ Made in Next.js
 All libraries used/installed using CMD `bun i/install`
 - [Framer-Motion](https://www.framer.com/motion/)
 - [Lenis (Smooth Scroll)](https://lenis.darkroom.engineering/)
+- EMail.js
 - GSAP (Not in use ATM)
 
 Deployed on Vercel
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 herman test (sigma mester)
