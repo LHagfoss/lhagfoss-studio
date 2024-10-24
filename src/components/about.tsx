@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, easeInOut } from "framer-motion"; 
+import Image from "next/image";
+
+import norgeFlag from "@/assets/Flag_of_Norway.svg.png"
 
 export default function About() {
     const [isVisible, setIsVisible] = useState(false);
@@ -60,26 +63,37 @@ export default function About() {
 
     return (
         <div className="w-[100vw] relative bottom-0 flex flex-col gap-10 items-start p-5 md:p-10 md:text-[1.5vw] text-[5vw]">
-            <div className="w-full h-[60vh] md:h-[27vw] text-thirdy text-[3vw] leading-5 md:leading-8 text1-container flex flex-col md:flex-row justify-between overflow-hidden p-10 gap-10 bg-primary rounded-[3vw]">
+            <div className="w-full h-[100vh] md:h-[27vw] text-thirdy text-[3vw] leading-5 md:leading-8 text1-container flex flex-col md:flex-row justify-between overflow-hidden p-10 gap-10 bg-primary rounded-[3vw]">
                 <div className="w-full h-full flex flex-col justify-between">
                     <div className="min-h-0 flex flex-wrap leading-8 md:leading-none">
                         { isVisible && (
                             text1.split(" ").map((word, index) => (
-                                <motion.div 
-                                    key={index} 
-                                    initial={{ y: 100, opacity: 0 }} 
-                                    animate={{ y: 0, opacity: 1 }} 
-                                    transition={{ duration: 0.75, delay: 0.1 + index * 0.025, ease: easeInOut }} 
-                                    className={`px-2 ${index === 1 || index === 2 || index === 16 ? "text-secondary" : "text-thirdy"} text-[8vw] md:text-[3.5vw]`}
-                                >
-                                    {word}
-                                </motion.div>
+                                <React.Fragment key={index}>
+                                    <motion.div 
+                                        key={`word-${index}`} 
+                                        initial={{ y: 100, opacity: 0 }} 
+                                        animate={{ y: 0, opacity: 1 }} 
+                                        transition={{ duration: 0.75, delay: 0.1 + index * 0.025, ease: easeInOut }} 
+                                        className={`px-2 ${index === 1 || index === 2 || index === 16 ? "text-secondary" : "text-thirdy"} text-[8vw] md:text-[3.5vw]`}
+                                    >
+                                        {word}
+                                    </motion.div>
+                                    {index === 2 && (
+                                        <motion.div 
+                                            initial={{ y: 100, opacity: 0 }} 
+                                            animate={{ y: 0, opacity: 1 }} 
+                                            transition={{ duration: 0.75, delay: 0.1 + index * 0.025, ease: easeInOut }} 
+                                        >
+                                            <Image src={norgeFlag} alt="Norway Flag" className="w-[10vw] md:w-[5vw] rounded"></Image>
+                                        </motion.div>
+                                    )}
+                                </React.Fragment>
                             ))
                         )}
                     </div>
                     <div className="flex gap-3">
-                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[1vw]">Learn more</button>
-                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[1vw]">More like this</button>
+                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[3vw] md:text-[1vw]">Learn more</button>
+                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[3vw] md:text-[1vw]">More like this</button>
                     </div>
                 </div>
                 <div className="flex flex-col h-full justify-between">
@@ -101,7 +115,7 @@ export default function About() {
                     <div className="bottom-0 gap-3 flex flex-row justify-between">
                         <button 
                             type="button" 
-                            className={`p-5 rounded-full w-[5vw] aspect-square border border-secondary text-secondary hover:bg-secondary hover:text-primary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                            className={`p-5 w-[20vw] md:w-[5vw] aspect-square rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-primary font-bold text-[3vw] md:text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                             onClick={handleClickReset} 
                             disabled={isAnimating}
                         >
@@ -109,7 +123,7 @@ export default function About() {
                         </button>
                         <button 
                             type="button" 
-                            className={`p-5 w-[5vw] aspect-square rounded-full border border-[#ff0000] text-[#ff0000] hover:bg-[#ff0000] hover:text-secondary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                            className={`p-5 w-[20vw] md:w-[5vw] aspect-square rounded-full border border-[#ff0000] text-[#ff0000] hover:bg-[#ff0000] hover:text-secondary font-bold text-[3vw] md:text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                             onClick={handleClickRemove} 
                             disabled={isAnimating || number === 0}
                         >
@@ -117,7 +131,7 @@ export default function About() {
                         </button>
                         <button 
                             type="button" 
-                            className={`p-5 w-[5vw] aspect-square rounded-full border border-[#00ff22] text-[#00ff22] hover:bg-[#00ff22] hover:text-secondary hover font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                            className={`p-5 w-[20vw] md:w-[5vw] aspect-square rounded-full border border-[#00ff22] text-[#00ff22] hover:bg-[#00ff22] hover:text-secondary hover font-bold text-[3vw] md:text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                             onClick={handleClickAdd} 
                             disabled={isAnimating}
                         >
@@ -126,8 +140,8 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className="w-full h-[60vh] md:h-[27vw] flex flex-col md:flex-row gap-10 leading-5 md:leading-8">
-                <div className="w-full h-full md:w-1/2 flex flex-col justify-between p-10 bg-primary rounded-[3vw] gap-10">
+            <div className="w-full flex flex-col md:flex-row gap-10">
+                <div className="w-full md:w-1/2 h-[80vh] md:h-[27vw] flex flex-col justify-between p-10 bg-primary rounded-[3vw] gap-10 leading-7 md:leading-6">
                     <div className="w-full min-h-0 flex flex-wrap">
                         { isVisible && (
                             text2.split(" ").map((word, index) => (
@@ -144,11 +158,11 @@ export default function About() {
                         )}
                     </div>
                     <div className="flex gap-3">
-                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[1vw]">Learn more</button>
-                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[1vw]">More like this</button>
+                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[3vw] md:text-[1vw]">Learn more</button>
+                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[3vw] md:text-[1vw]">More like this</button>
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 flex flex-col justify-between p-10 bg-primary rounded-[3vw] gap-10">
+                <div className="w-full md:w-1/2 h-[100vh] md:h-[27vw] flex flex-col justify-between p-10 bg-primary rounded-[3vw] gap-10 leading-8 md:leading-8">
                     <div className="w-full min-h-0 flex flex-wrap">
                         { isVisible && (
                             text3.split(" ").map((word, index) => (
@@ -180,8 +194,8 @@ export default function About() {
                         )}
                     </div>
                     <div className="flex gap-3">
-                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[1vw]">Learn more</button>
-                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[1vw]">More like this</button>
+                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[3vw] md:text-[1vw]">Learn more</button>
+                        <button type="button" className="p-1 px-5 bg-thirdy rounded-full text-secondary text-[3vw] md:text-[1vw]">More like this</button>
                     </div>
                 </div>
             </div>
