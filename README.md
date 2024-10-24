@@ -13,4 +13,4 @@ All libraries used/installed using CMD `bun i/install`
 Deployed on Vercel
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-herman test
+herman test (sigma mester)
