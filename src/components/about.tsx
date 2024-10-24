@@ -83,7 +83,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="flex flex-col h-full justify-between">
-                    <div className="aspect-square h-2/3 bg-[#3c3c3c] rounded-3xl p-5 md:p-10 shadow flex">
+                    <div className="aspect-square  bg-[#3c3c3c] rounded-3xl p-5 md:p-10 shadow flex">
                         <div className="w-full h-full">
                             <div className="aspect-square h-full  flex flex-col justify-center items-center relative">
                                 <motion.div 
@@ -98,10 +98,10 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                    <div className="bottom-0 flex flex-row justify-between">
+                    <div className="bottom-0 gap-3 flex flex-row justify-between">
                         <button 
                             type="button" 
-                            className={`p-1 px-5 rounded-full h-10 border border-secondary text-secondary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                            className={`p-5 rounded-full w-[5vw] aspect-square border border-secondary text-secondary hover:bg-secondary hover:text-primary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                             onClick={handleClickReset} 
                             disabled={isAnimating}
                         >
@@ -109,7 +109,7 @@ export default function About() {
                         </button>
                         <button 
                             type="button" 
-                            className={`p-1 px-7 h-10 rounded-full border border-[#ff0000] text-[#ff0000] hover:bg-[#ff0000] hover:text-secondary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                            className={`p-5 w-[5vw] aspect-square rounded-full border border-[#ff0000] text-[#ff0000] hover:bg-[#ff0000] hover:text-secondary font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                             onClick={handleClickRemove} 
                             disabled={isAnimating || number === 0}
                         >
@@ -117,7 +117,7 @@ export default function About() {
                         </button>
                         <button 
                             type="button" 
-                            className={`p-1 px-7 h-10 rounded-full border border-[#00ff22] text-[#00ff22] hover:bg-[#00ff22] hover:text-secondary hover font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                            className={`p-5 w-[5vw] aspect-square rounded-full border border-[#00ff22] text-[#00ff22] hover:bg-[#00ff22] hover:text-secondary hover font-bold text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
                             onClick={handleClickAdd} 
                             disabled={isAnimating}
                         >

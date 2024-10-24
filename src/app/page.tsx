@@ -9,7 +9,7 @@ import Navbar from "@/components/navbar";
 import About from "@/components/about";
 import Footer from "@/components/footer";
 import FadeIn from "@/components/fadein";
-import Slider from "@/components/slider";
+    import Slider from "@/components/slider";
 
 export default function Home() {
   const [, setIsScrolled] = useState(false);
@@ -44,7 +44,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className={`${ zoomIn ? "" : "overflow-hidden w-[100vw] h-[100vh]" }`}>
       <Navbar />
       <NavnAnimation />
       <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vw]" }`}>
@@ -71,6 +71,6 @@ export default function Home() {
       <FadeIn className="w-full h-full overflow-hidden">
         <Footer />
       </FadeIn>
-    </>
+    </div>
   );
 }

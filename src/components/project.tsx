@@ -30,7 +30,7 @@ export default function Project({ imageSrc, title, content, month, year }: Proje
                         </div>
                         <div className="w-full flex justify-between">
                             <div className="text-thirdy text-[3vw] md:text-[1vw] w-4/5">{content}</div>
-                            <button type="button" className="flex justify-center items-center p-2 cursor-pointer hover:bg-primary rounded-full"><Image src={more} alt="" className="min-w-[50px] object-cover"></Image></button>
+                            <button type="button" className="flex justify-center items-center p-2 cursor-pointer duration-500 hover:bg-primary hover:scale-125 rounded-full"><Image src={more} alt="" className="min-w-[50px] object-cover"></Image></button>
                         </div>
                     </div>
                 </div>
