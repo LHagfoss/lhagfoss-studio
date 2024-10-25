@@ -9,7 +9,7 @@ import Navbar from "@/components/navbar";
 import About from "@/components/about";
 import Footer from "@/components/footer";
 import FadeIn from "@/components/fadein";
-    import Slider from "@/components/slider";
+import Slider from "@/components/slider";
 
 export default function Home() {
   const [, setIsScrolled] = useState(false);

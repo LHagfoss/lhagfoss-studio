@@ -94,6 +94,7 @@ export default function About() {
                                     animate={controls}
                                 >
                                     {number}
+                                    <div className="text-[5vw]">old</div>
                                 </motion.div>
                             </div>
                         </div>

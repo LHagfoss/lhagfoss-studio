@@ -59,7 +59,7 @@ export default function Navbar() {
             </div>
 
             {/* Navbar for small screens */}
-            <div className="fixed flex justify-end items-start md:hidden w-[100vw] z-20">
+            <div className="fixed top-0 flex justify-end items-start md:hidden w-[100vw] z-20">
                 {/* <div className={`fixed top-0 left-0 z-40 flex flex-row justify-start items-center p-5 text-[10vw] w-1/2 font-bestFont duration-1000 ease-in-out ${isOpen ? 'text-secondary' : 'text-primary'}`}>
                     <a href="/">
                         <motion.div initial={{ y: -150 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 2, ease: easeInOut }}>

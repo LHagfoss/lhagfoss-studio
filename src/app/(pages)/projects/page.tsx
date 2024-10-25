@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from "react";
-import { motion, easeInOut } from "framer-motion"
+import FadeIn from "@/components/fadein";
 import Lenis from "lenis";
 
 import Navbar from "@/components/navbar"
@@ -27,14 +27,9 @@ export default function Home() {
       <Navbar />
       <SecondName />
       <Grid />
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1,ease: easeInOut }}
-        className="w-[100vw] h-[100vh] flex justify-center items-center"
-      >
+      <FadeIn className="w-full h-full overflow-hidden">
         <Footer />
-      </motion.div>
+      </FadeIn>
     </>
   );
 }
