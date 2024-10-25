@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, easeInOut } from "framer-motion"; 
+import { motion, easeInOut, useAnimation } from "framer-motion"; 
 import Image from "next/image";
 
 import norgeFlag from "@/assets/Flag_of_Norway.svg.png"
@@ -7,40 +7,28 @@ import norgeFlag from "@/assets/Flag_of_Norway.svg.png"
 export default function About() {
     const [isVisible, setIsVisible] = useState(false);
     const [number, setNumber] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
+    const controls = useAnimation();
 
-    const handleClickAdd = () => {
-        if (!isAnimating) {
-            setIsAnimating(true);
-            setNumber(prev => prev + 1);
+    useEffect(() => {
+        if (isVisible) {
+            controls.start({
+                transition: { duration: 1, ease: easeInOut, times: [0, 0.5, 1] }
+            });
 
-            setTimeout(() => {
-                setIsAnimating(false);
-            }, 500);
+            const interval = setInterval(() => {
+                setNumber(prevNumber => {
+                    if (prevNumber < 17) {
+                        return prevNumber + 1;
+                    } else {
+                        clearInterval(interval);
+                        return prevNumber;
+                    }
+                });
+            }, 200);
+
+            return () => clearInterval(interval);
         }
-    };
-
-    const handleClickRemove = () => {
-        if (!isAnimating && number > 0) {
-            setIsAnimating(true);
-            setNumber(prev => prev - 1);
-
-            setTimeout(() => {
-                setIsAnimating(false);
-            }, 500);
-        }
-    };
-
-    const handleClickReset = () => {
-        if (!isAnimating) {
-            setIsAnimating(true);
-            setNumber(0);
-
-            setTimeout(() => {
-                setIsAnimating(false);
-            }, 500);
-        }
-    };
+    }, [isVisible, controls]);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -97,46 +85,18 @@ export default function About() {
                     </div>
                 </div>
                 <div className="flex flex-col h-full justify-between">
-                    <div className="aspect-square  bg-[#3c3c3c] rounded-3xl p-5 md:p-10 shadow flex">
+                    <div className="aspect-square sm:w-[full] md:h-full bg-[#3c3c3c] rounded-[3vw] shadow flex">
                         <div className="w-full h-full">
                             <div className="aspect-square h-full  flex flex-col justify-center items-center relative">
                                 <motion.div 
-                                    id="number" 
-                                    className="text-secondary text-[10vw] font-digitalFont" 
-                                    initial={{ scale: 1 }} 
-                                    animate={isAnimating ? { scale: 1.10 } : { scale: 1 }} 
-                                    transition={{ duration: 0.5, ease: easeInOut, type: "spring", stiffness: 150  }}
+                                    id="number"
+                                    className="text-secondary text-[20vw] md:text-[15vw] font-digitalFont" 
+                                    animate={controls}
                                 >
                                     {number}
                                 </motion.div>
                             </div>
                         </div>
-                    </div>
-                    <div className="bottom-0 gap-3 flex flex-row justify-between">
-                        <button 
-                            type="button" 
-                            className={`p-5 w-[20vw] md:w-[5vw] aspect-square rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-primary font-bold text-[3vw] md:text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
-                            onClick={handleClickReset} 
-                            disabled={isAnimating}
-                        >
-                            Reset
-                        </button>
-                        <button 
-                            type="button" 
-                            className={`p-5 w-[20vw] md:w-[5vw] aspect-square rounded-full border border-[#ff0000] text-[#ff0000] hover:bg-[#ff0000] hover:text-secondary font-bold text-[3vw] md:text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
-                            onClick={handleClickRemove} 
-                            disabled={isAnimating || number === 0}
-                        >
-                            -1
-                        </button>
-                        <button 
-                            type="button" 
-                            className={`p-5 w-[20vw] md:w-[5vw] aspect-square rounded-full border border-[#00ff22] text-[#00ff22] hover:bg-[#00ff22] hover:text-secondary hover font-bold text-[3vw] md:text-[0.8vw] ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`} 
-                            onClick={handleClickAdd} 
-                            disabled={isAnimating}
-                        >
-                            +1
-                        </button>
                     </div>
                 </div>
             </div>

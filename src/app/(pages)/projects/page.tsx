@@ -1,20 +1,32 @@
 "use client"
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, easeInOut } from "framer-motion"
+import Lenis from "lenis";
 
 import Navbar from "@/components/navbar"
 import SecondName from "@/components/secondnavn";
 import Footer from "@/components/footer";
+import Grid from "@/components/grid";
 
 export default function Home() {
+
+  useEffect( () => {
+    window.scrollTo(0, 0);
+
+    const lenis = new Lenis();
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <>
       <Navbar />
       <SecondName />
-      <div className="w-full h-full overflow-hidden flex justify-center items-center">
-
-      </div>
+      <Grid />
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
