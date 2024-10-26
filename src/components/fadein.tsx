@@ -9,8 +9,8 @@ export default function FadeIn({ children, delay = 1 }: { children: React.ReactN
   });
 
   const variants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, scale: 1 },
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
   };
 
   return (

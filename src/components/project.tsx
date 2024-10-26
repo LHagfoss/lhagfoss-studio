@@ -18,8 +18,8 @@ export default function Project({ imageSrc, title, content }: ProjectProps) {
     return (
         <>
             <div className="relative flex flex-col justify-center items-center h-full">
-                <Image src={imageSrc} alt="" className="w-[70vw] object-cover rounded-[3vw] bg-thirdy cursor-pointer" />
-                <div className="w-[70vw] flex justify-between items-center relative py-10"> 
+                <Image src={imageSrc} alt="" className="w-full object-cover rounded-[3vw] bg-thirdy cursor-pointer" />
+                <div className="w-full flex justify-between items-center relative py-10"> 
                     <div className="flex w-full">
                         <div className="w-full flex flex-col">
                             <div className="text-secondary text-[6vw] md:text-[2vw]">{title}</div>

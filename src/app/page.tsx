@@ -6,10 +6,10 @@ import Lenis from "lenis";
 import ImageSection from "@/components/imageSection";
 import NavnAnimation from "@/components/navn";
 import Navbar from "@/components/navbar";
-import About from "@/components/about";
 import Footer from "@/components/footer";
 import FadeIn from "@/components/fadein";
 import Slider from "@/components/slider";
+import Grid from "@/components/grid";
 
 export default function Home() {
   const [, setIsScrolled] = useState(false);
@@ -50,14 +50,10 @@ export default function Home() {
       <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "p-0" : "p-[50vw]" }`}>
         <div className={`w-full h-full bg-fourth duration-1500 ${ zoomIn ? "rounded-none" : "rounded-full" }`}></div>
       </div>
+      <Grid />
+      <ImageSection />
       <FadeIn delay={0}>
-        <About />
-      </FadeIn>
-      <FadeIn delay={0}>
-        <ImageSection />
-      </FadeIn>
-      <FadeIn delay={0}>
-        <div className="flex p-5 md:p-10 text-[7vw] md:text-[5vw]">
+        <div className="flex p-5 md:p-10 md:px-44 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
             <div className="flex gap-3 md:gap-5">
               <div className="text-thirdy">Latest</div>
@@ -67,8 +63,10 @@ export default function Home() {
           </div>
         </div>
       </FadeIn>
-      <Slider />
-      <FadeIn className="w-full h-full overflow-hidden">
+      <main className="flex flex-col items-center justify-center pb-10">
+        <Slider />
+      </main>
+      <FadeIn delay={0} className="w-full h-full overflow-hidden">
         <Footer />
       </FadeIn>
     </div>

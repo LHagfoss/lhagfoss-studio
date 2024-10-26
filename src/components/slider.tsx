@@ -1,66 +1,105 @@
-import { useState } from 'react';
-import Project from './project';
-import FadeIn from './fadein';
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import projectImage1 from "@/assets/googleblablalba.jpg"
 import projectImage2 from "@/assets/image97-transformed.jpeg"
 
-export default function Slider() {
-    const projects = [
-        { imageSrc: projectImage1, title: 'Website / Project #1', content: 'This is my Github account, filled with all my codes from when I started til today!', month: 'April', year: '2024' },
-        { imageSrc: projectImage2, title: 'Website / Project #2', content: 'more random words', month: 'April', year: '2024' },
-        { imageSrc: projectImage1, title: 'Website / Project #3', content: 'even more text', month: 'April', year: '2024' },
-        { imageSrc: projectImage2, title: 'Website / Project #4', content: 'This is my Github account, filled with all my codes from when I started til today!', month: 'April', year: '2024' },
-        { imageSrc: projectImage2, title: 'Website / Project #5', content: 'more random words', month: 'April', year: '2024' },
-        { imageSrc: projectImage1, title: 'Website / Project #6', content: 'even more text', month: 'April', year: '2024' },
-        { imageSrc: projectImage1, title: 'Website / Project #7', content: 'even more text', month: 'April', year: '2024' }
-    ];
+interface ImageData {
+    src: StaticImageData;
+}
 
-    const[index, setIndex] = useState(0);
-    const totalImages = projects.length
+const images: ImageData[] = [
+    { src: projectImage1 },
+    { src: projectImage2 },
+    { src: projectImage1 },
+    { src: projectImage2 },
+    { src: projectImage2 },
+    { src: projectImage1 },
+    { src: projectImage1 },
+];
 
-    const next = () => {
-        if(index < totalImages - 1){
-            setIndex((prevIndex) => prevIndex + 1)  
-        }
-        if (index >= totalImages -1){
-            setIndex((prevIndex) => 0)  
-        }
-    }
-    const prev = () => {
-        if (index > 0) {
-            setIndex((prevIndex) => prevIndex - 1);
-        }
-        if (index <= 0){
-            setIndex((prevIndex) => 6)  
-        }
+function useInterval(callback: () => void, delay: number | null) {
+    useEffect(() => {
+      if (delay !== null) {
+        const id = setInterval(callback, delay);
+        return () => clearInterval(id);
+      }
+    }, [callback, delay]);
+  }
+
+export default function ImageSlider(): JSX.Element {
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const [isHovered, setIsHovered] = useState<boolean>(false);
+  
+    const prevSlide = (): void => {
+      setCurrentIndex(
+        (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      );
     };
-
+  
+    const nextSlide = (): void => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+  
+    useInterval(() => {
+        if (!isHovered) {
+          nextSlide();
+        }
+      }, 3000);
+  
+    const handleMouseOver = (): void => {
+      setIsHovered(true);
+    };
+  
+    const handleMouseLeave = (): void => {
+      setIsHovered(false);
+    };
+  
     return (
-        <FadeIn delay={1}>
-            <div className="w-full border h-[100vh] flex flex-col justify-center items-center mb-[100px] ">
-                <div className="flex flex-col justify-center items-center border">
-                    {projects.slice(index, index + 1).map((project) => (
-                        <div key={project.title}>
-                            <Project 
-                                imageSrc={project.imageSrc}
-                                title={project.title}
-                                content={project.content}
-                            />
-                        </div>
-                    ))}
-                    <div className="w-full flex justify-between items-center">
-                        <button onClick={prev} className='bg-white text-black aspect-square rounded-full p-5'>Prev</button>
-                        <div className="flex gap-3">
-                            {Array.from({ length: Math.ceil(totalImages) }).map((_, i) => (
-                                <div key={i} className={`aspect-square w-5 h-5 rounded-full ${i === Math.floor(index) ? 'bg-secondary scale-125' : 'bg-primary scale-100'}`}></div>
-                            ))}
-                        </div>
-                        <button onClick={next} className='bg-white aspect-square text-black rounded-full p-5' disabled={index >= totalImages}>Next</button>
-                    </div>
-                </div>
-                
+      <div className="relative w-full p-5 md:px-44">
+        <div className="w-full relative inset-0">
+            <div
+            className="relative h-[460px] mx-10 md:mx-32 group"
+            onMouseOver={handleMouseOver}
+            onMouseLeave={handleMouseLeave}
+            >
+            <Image
+                src={images[currentIndex].src}
+                alt={`Slider Image ${currentIndex + 1}`}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl transition-all duration-500 ease-in-out cursor-pointer"
+            />
             </div>
-        </FadeIn>
+            <button
+            className="absolute left-0 top-1/2 transform h-[459px] rounded-xl hover:bg-secondary mx-1 -mt-[10px] duration-300 -translate-y-1/2 bg-primary text-white p-1 md:p-10 group"
+            onClick={prevSlide}
+            >
+            <ChevronLeft className="text-secondary group-hover:text-fourth" />
+            </button>
+            <button
+            className="absolute right-0 top-1/2 transform h-[459px] rounded-xl hover:bg-secondary mx-1 -mt-[10px] duration-300 -translate-y-1/2 bg-primary text-white p-1 md:p-10 group"
+            onClick={nextSlide}
+            >
+            <ChevronRight className="text-secondary group-hover:text-fourth" />
+            </button>
+            <div className="flex justify-center mt-4">
+            {images.map((_, index) => (
+                <div
+                key={index}
+                className={`h-1 w-10 mx-1 ${
+                    index === currentIndex
+                    ? "bg-secondary rounded-xl"
+                    : "bg-primary rounded-xl"
+                } transition-all duration-500 ease-in-out`}
+                ></div>
+            ))}
+            </div>
+        </div>
+      </div>
     );
-};
+}
