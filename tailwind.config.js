@@ -117,6 +117,6 @@ module.exports = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate"), require('tailwindcss-spring'),],
+  plugins: [require("tailwindcss-animate"), require('tailwindcss-spring'), require('tailwind-scrollbar'),],
 }
 
