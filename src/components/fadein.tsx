@@ -20,7 +20,7 @@ export default function FadeIn({ children, delay = 1 }: { children: React.ReactN
       animate={inView ? 'visible' : 'hidden'}
       transition={{ delay: delay, duration: 1, ease: easeInOut }}
       variants={variants}
-      className=''
+      className=""
     >
       {children}
     </motion.div>

@@ -51,7 +51,6 @@ export default function Home() {
         <div className={`w-full h-full bg-fourth duration-1500 ${ zoomIn ? "rounded-none" : "rounded-full" }`}></div>
       </div>
       <Grid />
-      <ImageSection />
       <FadeIn delay={0}>
         <div className="flex p-5 md:p-10 md:px-44 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
@@ -63,9 +62,7 @@ export default function Home() {
           </div>
         </div>
       </FadeIn>
-      <main className="flex flex-col items-center justify-center pb-10">
-        <Slider />
-      </main>
+      <Slider />
       <FadeIn delay={0} className="w-full h-full overflow-hidden">
         <Footer />
       </FadeIn>
