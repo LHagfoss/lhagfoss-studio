@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+import FadeIn from "./fadein";
+
 import albumcover from "@/assets/image (1).png"
 import nextjs from "@/assets/nextjs.png"
 import youtubeIcon from "@/assets/youtube.png"
@@ -32,7 +34,7 @@ export default function Footer() {
     };
 
     return (
-        <>
+        <FadeIn delay={0}>
             <div className="w-full h-[100vh] md:h-[70vh] overflow-hidden flex justify-center items-end p-5 md:p-10 md:px-44">
                 <div className="bg-primary w-full h-full md:h-[65vh] rounded-[5vw] md:rounded-[2vw] p-7 md:p-14 text-secondary flex flex-col justify-between shadow font-bricoGrotR">
                     <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy pb-10 font-clashDisM"><span className="text-secondary">Let&apos;s talk </span> about<br/> your project</div>
@@ -91,7 +93,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>  
-        </>
+        </FadeIn>
     );
 }
  

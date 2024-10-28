@@ -63,9 +63,7 @@ export default function Home() {
         </div>
       </FadeIn>
       <Slider />
-      <FadeIn delay={0} className="w-full h-full overflow-hidden">
-        <Footer />
-      </FadeIn>
+      <Footer />
     </div>
   );
 }
