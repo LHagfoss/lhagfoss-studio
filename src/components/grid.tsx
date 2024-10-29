@@ -27,7 +27,7 @@ export default function Grid() {
                     <div className="p-5 md:p-44 w-[100vw] h-[100vw]">
                         <div className="w-full h-full grid grid-rows-4 grid-cols-4 gap-1 md:gap-5">
                             <div className="bg-primary row-span-1 col-span-2 rounded-[2vw] overflow-hidden">
-                                <motion.div initial={{ y: 550 }} animate={{ y: 0 }} transition={{ delay: 1.1, duration: 1.5, ease: easeInOut }}  className="text-[#bebebe] bg-[#655bff] text-[1.2vw] flex flex-col justify-between w-full p-5 h-full">
+                                <motion.div initial={{ y: 550 }} animate={{ y: 0 }} transition={{ delay: 1.1, duration: 1.5, ease: easeInOut }}  className="text-[#bebebe] bg-[#655bff] text-[1.2vw] flex flex-col justify-between w-full p-2 md:p-5 h-full">
                                     <div className="flex w-full justify-between relative inset-0">
                                         <div className="flex flex-col leading-tight">
                                             <div className="text-[2.5vw] text-secondary">Lucas Hagfoss</div>
@@ -49,13 +49,13 @@ export default function Grid() {
                                 </motion.div>
                             </div>
                             <div className="bg-primary row-span-2 col-span-1 rounded-[2vw] overflow-hidden">
-                                <div className="w-full h-full rounded-[2vw] p-5 flex flex-col justify-between">
+                                <div className="w-full h-full rounded-[2vw] p-2 md:p-5 flex flex-col justify-between">
                                     <motion.div initial={{ y: -550 }} animate={{ y: 0 }} transition={{ delay: 1.2, duration: 1.5, ease: easeInOut }} className="flex flex-col mb-5">
                                         <div className="text-secondary text-[2vw]">Happy Customers</div>
-                                        <div className="text-thirdy">(Not real customers, just for testing purpose)</div>
+                                        <div className="text-thirdy text-[1vw]">(Not real customers, just for testing purpose)</div>
                                     </motion.div>
                                     <div className="w-full flex flex-col gap-3">
-                                        <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.3, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-3">
+                                        <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.3, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-1 md:p-3">
                                             <div className="text-secondary flex items-center justify-between">
                                                 <div className="flex gap-1">
                                                     <Image src={profileIcon} alt="profile" className=""></Image>
@@ -67,7 +67,7 @@ export default function Grid() {
                                                 <div className="text-[0.9vw]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae animi, corporis saepe ex eaque blanditiis.</div>                                                
                                             </div>
                                         </motion.div>
-                                        <motion.div initial={{ x: 550 }} animate={{ x: 0 }} transition={{ delay: 1.4, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-3">
+                                        <motion.div initial={{ x: 550 }} animate={{ x: 0 }} transition={{ delay: 1.4, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-1 md:p-3">
                                             <div className="text-secondary flex items-center justify-between">
                                             <div className="flex gap-1">
                                                 <Image src={profileIcon} alt="profile" className=""></Image>
@@ -79,7 +79,7 @@ export default function Grid() {
                                                 <div className="text-[0.9vw]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae animi, corporis saepe ex eaque blanditiis.</div>                                                
                                             </div>
                                         </motion.div>
-                                        <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-3">
+                                        <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-1 md:p-3">
                                             <div className="text-secondary flex items-center justify-between">
                                             <div className="flex gap-1">
                                                 <Image src={profileIcon} alt="profile" className=""></Image>
@@ -91,7 +91,7 @@ export default function Grid() {
                                                 <div className="text-[0.9vw]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae animi, corporis saepe ex eaque blanditiis.</div>                                                
                                             </div>
                                         </motion.div>
-                                        <motion.div initial={{ x: 550 }} animate={{ x: 0 }} transition={{ delay: 1.6, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-3">
+                                        <motion.div initial={{ x: 550 }} animate={{ x: 0 }} transition={{ delay: 1.6, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-1 md:p-3">
                                             <div className="text-secondary flex justify-between items-center">
                                             <div className="flex gap-1">
                                                 <Image src={profileIcon} alt="profile" className=""></Image>
@@ -103,7 +103,7 @@ export default function Grid() {
                                                 <div className="text-[0.9vw]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae animi, corporis saepe ex eaque blanditiis.</div>                                                
                                             </div>
                                         </motion.div>
-                                        <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.7, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-3">
+                                        <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.7, duration: 1.5, ease: easeInOut }} className="w-full max-h-[200px] bg-fourth rounded-[1vw] p-1 md:p-3">
                                             <div className="text-secondary flex justify-between items-center">
                                             <div className="flex gap-1">
                                                 <Image src={profileIcon} alt="profile" className=""></Image>
@@ -124,7 +124,7 @@ export default function Grid() {
                                 </motion.div>
                             </div>
                             <div className="bg-primary row-span-2 col-span-1 rounded-[2vw] overflow-hidden">
-                                <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.8, duration: 1.5, ease: easeInOut }} className="w-full h-full grid grid-rows-6 grid-cols-3 p-5 gap-3">
+                                <motion.div initial={{ x: -550 }} animate={{ x: 0 }} transition={{ delay: 1.8, duration: 1.5, ease: easeInOut }} className="w-full h-full grid grid-rows-6 grid-cols-3 p-2 md:p-5 gap-3">
                                     <div className="bg-fourth rounded-[1vw] col-span-2"></div>
                                     <div className="bg-fourth rounded-[1vw] row-span-2"></div>
                                     <div className="bg-fourth rounded-[1vw] row-span-2 col-span-2"></div>

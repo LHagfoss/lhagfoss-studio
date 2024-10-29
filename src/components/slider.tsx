@@ -56,20 +56,20 @@ export default function ImageSlider(): JSX.Element {
   
     return (
         <FadeIn delay={0}>
-            <div className="relative w-[100vw] p-5 md:px-44 mb-24 inset-0" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+            <div className="relative w-[100vw] py-12 md:px-44 mb-24 inset-0" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
                 <div className="w-full h-full flex flex-col justify-between items-center">
                     <Image
                         src={images[currentIndex].src}
                         alt={`Slider Image ${currentIndex + 1}`}
                         className="rounded-3xl aspect-video w-full transition-all duration-500 ease-in-out cursor-pointer"
                     />
-                    <div className="absolute -bottom-12 w-full md:px-44 flex justify-center items-center mt-4">
+                    <div className="absolute -bottom-2 w-full px-5 md:px-44 flex justify-center items-end mt-4">
                     {images.map((_, index) => (
                         <div
                         key={index}
                         className={`h-5 w-full mx-1 cursor-pointer ${
                             index === currentIndex
-                            ? "bg-secondary h-8 rounded-full"
+                            ? "bg-secondary md:h-12 rounded-full"
                             : "bg-primary rounded-xl h-5"
                         } transition-all duration-500 ease-in-out`}
                         onClick={() => nextSlide(index)}
