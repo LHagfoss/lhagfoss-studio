@@ -27,9 +27,7 @@ export default function Home() {
       <Navbar />
       <SecondName />
       <Grid />
-      <FadeIn className="w-full h-full overflow-hidden">
-        <Footer />
-      </FadeIn>
+      <Footer />
     </>
   );
 }

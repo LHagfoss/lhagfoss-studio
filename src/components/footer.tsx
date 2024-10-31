@@ -34,7 +34,7 @@ export default function Footer() {
     };
 
     return (
-        <FadeIn delay={0}>
+        <FadeIn delay={0} className="w-full h-full overflow-hidden">
             <div className="w-full h-[100vh] md:h-[70vh] overflow-hidden flex justify-center items-end p-5 md:p-10 md:px-44">
                 <div className="bg-primary w-full h-full md:h-[65vh] rounded-[5vw] md:rounded-[2vw] p-7 md:p-14 text-secondary flex flex-col justify-between shadow font-bricoGrotR">
                     <div className="text-[10vw] sm:text-[10vw] md:text-[4vw] lg:test-[3vw] leading-12 text-thirdy pb-10 font-clashDisM"><span className="text-secondary">Let&apos;s talk </span> about<br/> your project</div>
@@ -73,16 +73,16 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="w-full flex justify-between pt-5 sm:flex-col md:flex-row lg:flex-row flex-col">
-                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw] border-b border-thirdy py-5">
+                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw] py-5">
                             <div className="text-thirdy">Version</div>
                             <div className="">v0.61 - LHagfoss - 2024</div>
                         </div>
-                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw] border-b border-thirdy py-5">
+                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw] py-5">
                             <div className="text-thirdy">Local time</div>
                             <div className="" onClick={updateTime}>{time}</div>
                         </div>
 
-                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw] border-b border-thirdy py-5">
+                        <div className="text-[3vw] sm:text-[3vw] md:text-[0.7vw] py-5">
                             <div className="text-thirdy ">Socials</div>
                             <div className="flex gap-5">
                                 <a href="https://instagram.com" target="_blank"  className="flex items-center gap-2"><div className="w-[30px] h-[30px] bg-thirdy rounded-[5px]"><Image src={instagramIcon} alt="" className="object-fit h-full"></Image></div>Instagram</a>

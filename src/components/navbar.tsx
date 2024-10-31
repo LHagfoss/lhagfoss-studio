@@ -1,11 +1,14 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, easeInOut } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+
+import NavnNavbar from "./navnnavbar"
 import MotionLink from "@/components/motionlink";
+
 import copy from "@/assets/copy.svg";
 import close from "@/assets/close.svg"
 import menu from "@/assets/menu.svg"
@@ -14,6 +17,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [changeText, setChangeText] = useState(true)
+    const [zoomIn, setZoomIn] = useState(false);
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -26,15 +30,21 @@ export default function Navbar() {
     const copyEmail = () => {
         navigator.clipboard.writeText("lucash.1707@gmail.com");
         setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 3000);
+        setTimeout(() => setShowPopup(false), 4000);
     };
+
+    useEffect(() => {
+        setTimeout(() => {
+          setZoomIn(true);
+        }, 700);
+    }, []);
 
     return (
         <div className="navbar-container">
             {/* Navbar for medium screens */}
-            <div className="over fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-10 px-44 overflow-hidden navbar">
+            <div className={`over fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-5 px-44 overflow-hidden navbar bg-[#00000046] backdrop-blur-lg border-b duration-500 border-thirdy ${ zoomIn ? "top-0" : "top-[-100px]" }`}>
                 <div className="flex">
-                    {/* <a href="/"><motion.div initial={{ y: -250 }} animate={{  y: 0 }} transition={{ duration: 1.5, delay: 0.1, ease: easeInOut }}><Image src={lightLogo} alt="" className="w-[200px] object-contain cursor-pointer "></Image></motion.div></a> */}
+                    <NavnNavbar />
                 </div>
                 <div className={`flex justify-between gap-3 items-center ${ changeText ? "text-secondary" : "text-fourth" }`}>
                     <MotionLink delay={0.2} href="/test">Test</MotionLink>
@@ -44,7 +54,7 @@ export default function Navbar() {
                     <MotionLink delay={0.5} href="/other">Other</MotionLink>
                     <MotionLink delay={0.6} href="/github">Github</MotionLink>
                     <MotionLink delay={0.7} href="/contact">Contact</MotionLink>
-                    <motion.div initial={{ y: -250 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.5, delay: 0.8, ease: easeInOut }}>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.8, ease: easeInOut }}>
                         <div className="relative">
                             <div onClick={copyEmail} className="bg-primary text-secondary p-3 px-6 rounded-lg flex items-center gap-3 select-none cursor-pointer drop-shadow-lg">
                                 <Image src={copy} alt="" />
@@ -54,7 +64,7 @@ export default function Navbar() {
                     </motion.div>
                 </div>
                 {showPopup && (
-                    <div className="absolute top-[80px] mr-10 right-0 bg-thirdy rounded text-white p-2 px-5 flex justify-center text-[0.8vw] drop-shadow-lg">Copied email</div>
+                    <div className="absolute bottom-10 right-10 bg-thirdy rounded text-white p-2 px-5 flex justify-center text-[0.8vw] drop-shadow-lg">Copied email</div>
                 )}
             </div>
 

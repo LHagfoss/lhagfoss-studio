@@ -10,7 +10,6 @@ import norgeFlag from "@/assets/Flag_of_Norway.svg.png";
 import NextJSLogo from "@/assets/if82cpbS_400x400.jpg";
 import ReactJSLogo from "@/assets/react-logo-black-and-white-1.png";
 import info from "@/assets/info.svg"
-import background1 from "@/assets/thingy.jpg"
 
 export default function Grid() {
     const [ref, inView] = useInView({
