@@ -10,7 +10,7 @@ export default function NavnNavbar() {
 
     return (
         <>
-            <div className={`navbar fixed justify-center items-center select-none onTop z-20 top-[0] translate-y-[0] w-[40vw] md:w-[11vw] h-[5vh] mx-3 my-7 md:m-2 p-0`}>
+            <div className={`navbar fixed justify-center items-center select-none onTop z-20 `}>
                 <div className="flex w-full h-full justify-center items-center">
                     <div className={`font-bestFont text-secondary flex justify-center items-center text-[10vw] md:text-[2vw] h-[10vw] md:h-[3vw] cursor-pointer`}>
                         <motion.div initial={{ y: 800 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: easeInOut }} onClick={home}>L</motion.div>

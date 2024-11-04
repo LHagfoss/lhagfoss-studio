@@ -42,8 +42,8 @@ export default function Navbar() {
     return (
         <div className="navbar-container">
             {/* Navbar for medium screens */}
-            <div className={`over fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-5 px-44 overflow-hidden navbar bg-[#00000046] backdrop-blur-lg border-b duration-500 border-thirdy ${ zoomIn ? "top-0" : "top-[-100px]" }`}>
-                <div className="flex">
+            <div className={`over fixed top-0 hidden md:flex w-full text-[#1a1a1a] justify-between items-center p-5 px-44 overflow-hidden bg-[#0a0a0a60] navbar backdrop-blur-xl border-b duration-500 border-thirdy ${ zoomIn ? "top-0" : "top-[-100px]" }`}>
+                <div className="flex items-center">
                     <NavnNavbar />
                 </div>
                 <div className={`flex justify-between gap-3 items-center ${ changeText ? "text-secondary" : "text-fourth" }`}>

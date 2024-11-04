@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import FadeIn from "./fadein";
 
@@ -67,9 +66,9 @@ export default function ImageSlider(): JSX.Element {
                     {images.map((_, index) => (
                         <div
                         key={index}
-                        className={`h-5 w-full mx-1 cursor-pointer ${
+                        className={`h-5 hover:h-10 duration-500 w-full mx-1 cursor-pointer ${
                             index === currentIndex
-                            ? "bg-secondary md:h-12 rounded-full"
+                            ? "bg-secondary md:h-5 rounded-3xl"
                             : "bg-primary rounded-xl h-5"
                         } transition-all duration-500 ease-in-out`}
                         onClick={() => nextSlide(index)}

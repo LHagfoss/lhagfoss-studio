@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Lenis from "lenis";
-import { motion, useScroll } from "framer-motion";
 
 import NavnAnimation from "@/components/navn";
 import Navbar from "@/components/navbar";
@@ -11,11 +10,11 @@ import FadeIn from "@/components/fadein";
 import Slider from "@/components/slider";
 import Grid from "@/components/grid";
 import Layer from "@/components/layer";
+import FloatingButton from "@/components/floatingbutton";
 
 export default function Home() {
   const [, setIsScrolled] = useState(false);
   const [zoomIn, setZoomIn] = useState(false);
-  const { scrollYProgress } = useScroll();
 
   useEffect( () => {
     window.scrollTo(0, 0);
@@ -47,9 +46,9 @@ export default function Home() {
 
   return (
     <div className={`${ zoomIn ? "" : "overflow-hidden w-[100vw] h-[100vh]" }`}>
-      <motion.div   initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} style={{ scaleX: scrollYProgress }} className="bg-thirdy opacity-50 fixed bottom-0 left-0 right-0 h-1 origin-[0%] z-10" />  
       <Navbar />
       <NavnAnimation />
+      <FloatingButton />
       <div className={`w-full h-[100vh] overflow-hidden bg-secondary duration-1000 ${ zoomIn ? "" : "" }`}>
         <div className={`w-full bg-fourth duration-1000 ${ zoomIn ? "h-[100vh]" : "h-0" }`}></div>
       </div>

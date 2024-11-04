@@ -7,7 +7,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
+    extend: {
   		gridTemplateColumns: {
   			'16': 'repeat(16, minmax(0, 1fr))'
   		},
@@ -79,7 +79,10 @@ module.exports = {
 			digitalFont: "digitalFont"
   		},
   		transitionProperty: {
-  			background: 'background'
+  			background: 'background',
+			'width': 'width',
+			'height': 'height',
+			'fontSize': 'font-size',
   		},
   		borderColor: {
   			primary: '#1e1e1e',

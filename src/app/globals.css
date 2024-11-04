@@ -48,8 +48,17 @@ body {
 
 .navbar { z-index: 999; }
 .over { z-index: 9991; }
-.onTop { z-index: 9999;}
+.onTop { z-index: 9995;}
+.underProduction { z-index: 9999; }
 
+.hoverChangeOpacity:hover .changeOpacity {
+  opacity: 100;
+}
+
+.changeOpacity {
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
 
 .hoverMe::after {
   content: '';

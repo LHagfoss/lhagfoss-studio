@@ -7,7 +7,6 @@ import { motion, easeInOut } from "framer-motion"
 import Image from "next/image"
 
 import Navbar from "@/components/navbar"
-import SecondName from "@/components/secondnavn";
 import Footer from "@/components/footer"
 
 import instagramIcon from "@/assets/instagram.png"
@@ -73,7 +72,6 @@ export default function Home() {
   return (
     <>  
       <Navbar />
-      <SecondName />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2, duration: 1, ease: easeInOut }} className="mt-[100px] w-[100vw] h-[150vh] md:h-[100vh] flex justify-center items-center">
         <div className="w-full h-[full] flex flex-col md:flex-row">
           <div className="md:flex-1 flex flex-col leading-[0px] p-4 py-10 md:p-20 md:py-20">
