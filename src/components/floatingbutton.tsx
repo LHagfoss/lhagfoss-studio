@@ -10,13 +10,18 @@ export default function FloatingButton() {
             transition={{ delay: 2.5 }}
             className=""
         >
-            <div className="z-[100] underProtection fixed bottom-5 right-5 w-[35px] h-[35px] bg-[#1c1c1e] border border-[#3d3d3f] rounded-[20px] transition-all duration-500 ease-in-out hover:w-[400px] hover:h-[300px] overflow-hidden hoverChangeOpacity">
+            <div className="z-[100] fixed bottom-5 right-5 w-[35px] h-[35px] bg-[#1c1c1e] border border-[#3d3d3f] rounded-[20px] duration-500 ease-in-out hover:w-[400px] hover:h-[300px] overflow-hidden hoverChangeOpacity">
                 <div className=" bottom-5 right-5 w-[400px] h-[300px] bg-[#1c1c1e] border border-[#3d3d3f] rounded-[20px] p-5 flex flex-col justify-between changeOpacity">
                     <div className="flex flex-col gap-5">
-                        <div className="text-secondary text-[1.5vw] leading-7">This website is still under production.</div>
-                        <div className="w-full flex">
-                            <div className="text-thirdy text-[1vw] w-1/2 leading-5">Some things might be buggy or not fully completed.</div>
-                            <div className="text-thirdy text-[1vw] w-1/2 leading-5">Some things might be buggy or not fully completed.</div>
+                        <div 
+                            className="text-secondary text-[1.5vw] leading-7"
+                        >
+                            This website is still under production.
+                        </div>
+                        <div   
+                            className="text-fifth text-[1vw] leading-5"
+                        >
+                            I&apos;am currently not accepting new website projects, but will be available for collaborations in the near future.
                         </div>
                     </div>
                     <Link  
