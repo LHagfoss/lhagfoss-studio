@@ -1,5 +1,3 @@
-"use client"
-
 import { motion, easeInOut } from "framer-motion"
 
 export default function NavnNavbar() {

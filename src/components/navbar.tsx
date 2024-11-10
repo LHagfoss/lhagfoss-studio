@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState, useEffect } from "react";
 import { motion, easeInOut } from "framer-motion";
 import Image from "next/image";

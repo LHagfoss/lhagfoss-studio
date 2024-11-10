@@ -1,25 +1,24 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 
 import FadeIn from "./fadein";
 
-import projectImage1 from "@/assets/googleblablalba.jpg"
-import projectImage2 from "@/assets/image97-transformed.jpeg"
+import testImage from "@/assets/test.png"
+
 
 interface ImageData {
-    src: StaticImageData;
+  src: StaticImageData;
+  link: string;
 }
 
 const images: ImageData[] = [
-    { src: projectImage1 },
-    { src: projectImage2 },
-    { src: projectImage1 },
-    { src: projectImage2 },
-    { src: projectImage1 },
-    { src: projectImage2 },
+  { src: testImage, link: "https://test-project-lhagfoss-studio.vercel.app/" },
+  { src: testImage, link: "https://test-project-lhagfoss-studio.vercel.app/" },
+  { src: testImage, link: "https://test-project-lhagfoss-studio.vercel.app/" },
+  { src: testImage, link: "https://test-project-lhagfoss-studio.vercel.app/" },
+  { src: testImage, link: "https://test-project-lhagfoss-studio.vercel.app/" },
+  { src: testImage, link: "https://test-project-lhagfoss-studio.vercel.app/" },
 ];
 
 function useInterval(callback: () => void, delay: number | null) {
@@ -54,14 +53,16 @@ export default function ImageSlider(): JSX.Element {
     };
   
     return (
-        <FadeIn delay={0}>
-            <div className="relative w-[100vw] py-12 md:px-44 mb-24 inset-0" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-                <div className="w-full h-full flex flex-col justify-between items-center">
-                    <Image
-                        src={images[currentIndex].src}
-                        alt={`Slider Image ${currentIndex + 1}`}
-                        className="rounded-3xl aspect-video w-full transition-all duration-500 ease-in-out cursor-pointer"
-                    />
+      <FadeIn delay={0}>
+          <div className="relative w-[100vw] py-12 md:px-44 mb-24 inset-0" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+              <div className="w-full h-full flex flex-col justify-between items-center">
+                  <a href={images[currentIndex].link} target="_blank" rel="noopener noreferrer">
+                      <Image
+                          src={images[currentIndex].src}
+                          alt={`Slider Image ${currentIndex + 1}`}
+                          className="rounded-3xl aspect-video w-full transition-all duration-500 ease-in-out cursor-pointer"
+                      />
+                  </a>
                     <div className="absolute -bottom-2 w-full px-5 md:px-44 flex justify-center items-end mt-4">
                     {images.map((_, index) => (
                         <div
@@ -77,6 +78,6 @@ export default function ImageSlider(): JSX.Element {
                     </div>
                 </div>
             </div>
-      </FadeIn>
+        </FadeIn>
     );
 }

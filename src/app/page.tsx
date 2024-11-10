@@ -9,7 +9,7 @@ import Footer from "@/components/footer";
 import FadeIn from "@/components/fadein";
 import Slider from "@/components/slider";
 import Grid from "@/components/grid";
-import Layer from "@/components/layer";
+// import Layer from "@/components/layer";
 import FloatingButton from "@/components/floatingbutton";
 
 export default function Home() {
@@ -53,7 +53,7 @@ export default function Home() {
         <div className={`w-full bg-fourth duration-1000 ${ zoomIn ? "h-[100vh]" : "h-0" }`}></div>
       </div>
       <Grid />
-      <Layer />
+      {/* <Layer /> */}
       <FadeIn delay={0}>
         <div className="flex p-5 md:p-10 md:px-44 text-[7vw] md:text-[5vw]">
           <div className="w-full flex justify-between items-center">
